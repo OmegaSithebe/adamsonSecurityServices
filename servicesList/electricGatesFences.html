@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electric Gates and Fences - Adamson Security Services</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="../index.html" class="back-button">
+    &#8592; Back
+  </a>
+
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <h1>Electric Gates and Fences</h1>
+    <p>High-quality electric gates and fences for enhanced property security.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content-container">
+    <section class="service-details">
+      <h2>What We Offer</h2>
+      <p>
+        We provide state-of-the-art electric gates and fencing solutions to safeguard your property. 
+        Our systems are designed to offer durability, reliability, and seamless integration with your security setup.
+      </p>
+    </section>
+
+    <section class="benefits">
+      <h2>Benefits of Choosing Us</h2>
+      <ul>
+        <li>Customizable designs to match your aesthetic preferences.</li>
+        <li>High-grade materials for maximum durability and protection.</li>
+        <li>Advanced automation and remote control capabilities.</li>
+      </ul>
+    </section>
+
+    <section class="scope">
+      <h2>Scope of Work</h2>
+      <p>
+        We specialize in the installation, maintenance, and repair of electric gates and fences for residential, commercial, 
+        and industrial properties.
+      </p>
+    </section>
+
+    <section class="cta">
+      <h2>Request a Quote</h2>
+      <p>Get in touch with us to discuss your event's security needs.</p>
+      <button id="contactButton" class="btn">Contact Us</button>
+      
+      <!-- Hidden form -->
+      <form id="contactForm" style="display: none; margin-top: 20px;">
+        <label for="name">Name & Surname:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="contact">Contact Details:</label><br>
+        <input type="text" id="contact" name="contact" required><br><br>
+        
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+    
+    </main>
+
+    <script>
+      // JavaScript to toggle the form visibility
+      document.getElementById('contactButton').addEventListener('click', function() {
+        const form = document.getElementById('contactForm');
+        if (form.style.display === 'none' || form.style.display === '') {
+          form.style.display = 'block';
+        } else {
+          form.style.display = 'none';
+        }
+      });
+    
+      // JavaScript to handle form submission
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevents the default form submission
+    
+        // Get the user's name from the form
+        const name = document.getElementById('name').value;
+    
+        // Display a thank-you message
+        alert(`Thank you for contacting us, ${name}. We will be in touch shortly!`);
+    
+        // Optional: Clear the form fields
+        this.reset();
+    
+        // Optional: Hide the form after submission
+        this.style.display = 'none';
+      });
+    </script>
+    
+</body>
+</html>
+
+
+
+<style>
+    /* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #1e2532;
+  color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: #000000;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: #f1c40f;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  background: url('/assets/event-management-bg.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+}
+
+/* Content Sections */
+.content-container {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #f1c40f;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Call-to-Action */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f1c40f;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ffcc00;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 20px;
+}
+
+/* Back Button */
+.back-button {
+  position: sticky;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+  color: #f1c40f;
+  text-decoration: none;
+  background: transparent;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: color 0.3s, background 0.3s;
+}
+
+.back-button:hover {
+  color: #000000;
+  background: #f1c40f;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .hero-section p {
+    font-size: 1rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+</style>

@@ -12,6 +12,32 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff"> 
+		 <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .style2 {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .style2:hover {
+            background-color: #d32f2f;
+        }
+    </style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -103,7 +129,7 @@
 												</div>
 												<div class="col-12">
 													<ul class="actions">
-														<li><input type="submit" class="button style1 large" value="Book Us" /></li>
+														<li><input type="button" class="button style1 large" value="Book Us" onclick="bookService()" /></li>
 														<li><input type="reset" class="style2" value="Clear Form" /></li>
 													</ul>
 												</div>
@@ -130,7 +156,7 @@
 
 								<!-- Contact Form -->
 									<section>
-										<form method="post" action="#">
+										<form method="post" action="bookings.php" id="bookingForm">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-small">
 													<input type="text" name="name" id="contact-name" placeholder="Name" />
@@ -236,6 +262,19 @@
 				});
 			}
 		</script>
+
+<script>
+    function bookService() {
+        const nameInput = document.getElementById('contact-name').value; // Fixing the input ID
+        if (nameInput) {
+            alert(`Service Booked ${nameInput}, we will be in touch soon!`);
+            document.getElementById('bookingForm').reset(); // Ensure the form has this ID
+        } else {
+            alert('Please fill in your name before booking.');
+        }
+    }
+</script>
+
 
 	</body>
 </html>

@@ -107,10 +107,48 @@
 										</div>
 									</div>
 								</div>
+								<!-- Actions -->
 								<ul class="actions special">
-									<li><a href="#" class="button style1 large">Request Quote</a></li>
-									<li><a href="#" class="button style1 large">More Services</a></li>
+									<li><a  class="button style1 large" onclick="showQuoteForm()">Request Quote</a></li>
+									<li><a  class="button style1 large" onclick="showMoreServices()">More Services</a></li>
 								</ul>
+
+								<!-- Hidden Form for Request Quote -->
+								<div id="quoteFormContainer" style="display: none; margin-top: 20px;">
+									<form id="quoteForm" onsubmit="return handleQuoteSubmit()">
+										<div>
+											<label for="quote-name">Name & Surname:</label><br />
+											<input type="text" id="quote-name" name="name" required /><br /><br />
+										</div>
+										<div>
+											<label for="quote-email">Email Address:</label><br />
+											<input type="email" id="quote-email" name="email" required /><br /><br />
+										</div>
+										<div>
+											<label for="quote-phone">Cellphone Number:</label><br />
+											<input type="text" id="quote-phone" name="phone" required /><br /><br />
+										</div>
+										<div>
+											<label for="quote-service">Service:</label><br />
+											<select id="quote-service" name="service" required>
+												<option value="">- Select a Service -</option>
+												<option value="Event Management">Event Management</option>
+												<option value="Security Officers">Security Officers</option>
+												<option value="Security Consultants">Security Consultants</option>
+												<option value="Training Professionals">Training Professionals</option>
+												<option value="Electric Gates and Fences">Electric Gates and Fences</option>
+												<option value="CCTV Security Surveillance">CCTV Security Surveillance</option>
+												<option value="Risk Control and management">Risk Control and management</option>
+												<option value="V.I.P Protection and Solutions">V.I.P Protection and Solutions</option>
+											</select><br /><br />
+										</div>
+										<div>
+											<input type="submit" class="button style1 large" value="Submit" />
+										</div>
+									</form>
+								</div>
+
+								
 							</section>
 
 					</div>
@@ -275,6 +313,29 @@
 				 }).catch(function(err) {
 					console.log("No it didn't. This happened:", err)
 				});
+			}
+		</script>
+
+		<script>
+			// Function to show the Request Quote form
+			function showQuoteForm() {
+				document.getElementById('quoteFormContainer').style.display = 'block';
+			}
+
+			// Function to handle the submission of the Request Quote form
+			function handleQuoteSubmit() {
+				const name = document.getElementById('quote-name').value;
+				if (name) {
+					alert('Thank you, we will be in touch.');
+					document.getElementById('quoteForm').reset(); // Clear the form
+					document.getElementById('quoteFormContainer').style.display = 'none'; // Hide the form
+				}
+				return false; // Prevent actual form submission
+			}
+
+			// Function to show the More Services message
+			function showMoreServices() {
+				alert('Visit our Facebook page, search Adamson Security Services. \n Can also be found on Instagram and Twitter X.');
 			}
 		</script>
 
