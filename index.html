@@ -13,6 +13,9 @@
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff"> 
 	</head>
+	
+
+
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
@@ -26,27 +29,42 @@
 						</div>
 
 					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li><a href="#main" class="page-scroll">Services</a>
-									<ul>
-										<li><a href="/servicesList/eventManagement.html">Event Management</a></li>
-										<li><a href="/servicesList/securityOfficers.html">Security Officers</a></li>
-										<li><a href="/servicesList/securityConsultants.html">Security Consultants</a></li>
-										<li><a href="/servicesList/trainingProfessionals.html">Training Professionals</a></li>
-										<li><a href="/servicesList/electricGatesFences.html">Electric Gates and Fences</a></li>
-										<li><a href="/servicesList/investigatingProbing.html">Investigating and Probing</a></li>
-										<li><a href="/servicesList/securitySurveillance.html">CCTV Security Surveillance</a></li>
-										<li><a href="/servicesList/riskControlManagement.html">Risk Control and management</a></li>
-										<li><a href="/servicesList/protectionSolutions.html">V.I.P Protection and Solutions</a></li>
-									</ul>
-								</li>
-								<li><a href="rates.html">Rates</a></li>
-								<li><a href="bookings.html">Bookings</a></li>
-								<li><a href="about.html">About Us</a></li>
-							</ul>
-						</nav>
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="index.html">Home</a></li>
+							<li class="dropdown-parent">
+								<a href="#main" class="page-scroll">Services</a>
+								<ul class="main-dropdown">
+									<li><a href="/servicesList/eventManagement.html">Event Management</a></li>
+									<li><a href="/servicesList/securityOfficers.html">Security Officers</a></li>
+									<li><a href="/servicesList/securityConsultants.html">Security Consultants</a></li>
+									<li><a href="/servicesList/trainingProfessionals.html">Training Professionals</a></li>
+									<li><a href="/servicesList/electricGatesFences.html">Electric Gates and Fences</a></li>
+									<li><a href="/servicesList/investigatingProbing.html">Investigating and Probing</a></li>
+									<li><a href="/servicesList/securitySurveillance.html">CCTV Security Surveillance</a></li>
+									<li><a href="/servicesList/riskControlManagement.html">Risk Control and Management</a></li>
+									<li><a href="/servicesList/protectionSolutions.html">V.I.P Protection and Solutions</a></li>
+							
+									<li class="more-services">
+										<a href="javascript:void(0);">More Services &raquo;</a>
+										<ul class="nested-dropdown">
+											<li><a href="/servicesList/GateMotors.html">Gate Motors</a></li>
+											<li><a href="/servicesList/GarageDoorMotors.html">Garage Door Motors</a></li>
+											<li><a href="/servicesList/IntercomSystems.html">Intercom Systems</a></li>
+											<li><a href="/servicesList/RazorWire&SharpSpikes.html">Razor Wire & Sharp Spikes</a></li>
+											<li><a href="/servicesList/SecuritySpotLights.html">Security Spot Lights</a></li>
+											<li><a href="/servicesList/PlugsSwitches&HouseLight.html">Plugs, Switches & House Light</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							
+							<li><a href="rates.html">Rates</a></li>
+							<li><a href="bookings.html">Bookings</a></li>
+							<li><a href="about.html">About Us</a></li>
+						</ul>
+					</nav>
+					
 
 				</section>
 
@@ -121,8 +139,8 @@
 								</div>
 								<!-- Actions -->
 								<ul class="actions special">
-									<li><a  class="button style1 large" onclick="showQuoteForm()">Request Quote</a></li>
-									<li><a  class="button style1 large" onclick="showMoreServices()">More Services</a></li>
+									<li><a class="button style1 large" onclick="showQuoteForm()">Request Quote</a></li>
+									<li><a class="button style1 large" id="toggleMoreBtn" onclick="showMoreServices()">More Services</a></li>
 								</ul>
 
 								<!-- Hidden Form for Request Quote -->
@@ -158,6 +176,56 @@
 											<input type="submit" class="button style1 large" value="Submit" />
 										</div>
 									</form>
+								</div>
+
+								<!-- Additional Services (Hidden by Default) -->
+								<div id="moreServices" style="display: none; margin-top: 20px;">
+									<div class="feature-list">
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<section>
+													<h3 class="icon solid fa-bolt">Electric Fencing</h3>
+													<p>Reliable and high-voltage electric fencing to enhance your property's perimeter protection.</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-medium">
+												<section>
+													<h3 class="icon solid fa-door-closed">Gate Motors</h3>
+													<p>Automated gate motors for smooth, secure, and convenient access control.</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-medium">
+												<section>
+													<h3 class="icon solid fa-warehouse">Garage Door Motors</h3>
+													<p>Upgrade your garage access with robust and remote-operated door motors.</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-medium">
+												<section>
+													<h3 class="icon solid fa-phone-volume">Intercom Systems</h3>
+													<p>Clear and efficient communication with audio/video intercom systems for safety and convenience.</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-medium">
+												<section>
+													<h3 class="icon solid fa-shield-alt">Razor Wire & Sharp Spikes</h3>
+													<p>Heavy-duty razor wire and spikes for uncompromising boundary protection.</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-medium">
+												<section>
+													<h3 class="icon solid fa-lightbulb">Security Spot Lights</h3>
+													<p>Motion-sensor security lights to deter intruders and light up critical zones.</p>
+												</section>
+											</div>
+											<div class="col-6 col-12-medium">
+												<section>
+													<h3 class="icon solid fa-plug">Plugs, Switches & House Light</h3>
+													<p>We install and maintain all household electrical components for lighting and control.</p>
+												</section>
+											</div>
+										</div>
+									</div>
 								</div>
 							</section>
 
@@ -303,8 +371,12 @@
 		<script>
 			// Function to show the Request Quote form
 			function showQuoteForm() {
-				document.getElementById('quoteFormContainer').style.display = 'block';
-			}
+			const formContainer = document.getElementById('quoteFormContainer');
+			const isVisible = formContainer.style.display === 'block';
+
+			// Toggle display
+			formContainer.style.display = isVisible ? 'none' : 'block';
+		}
 
 			// Function to handle the submission of the Request Quote form
 			function handleQuoteSubmit() {
@@ -319,7 +391,16 @@
 
 			// Function to show the More Services message
 			function showMoreServices() {
-				alert('Visit our Facebook page, search Adamson Security Services. \n Can also be found on Instagram and Twitter X.');
+				const moreServices = document.getElementById("moreServices");
+				const toggleButton = document.getElementById("toggleMoreBtn");
+
+				if (moreServices.style.display === "none") {
+					moreServices.style.display = "block";
+					toggleButton.textContent = "Hide Services";
+				} else {
+					moreServices.style.display = "none";
+					toggleButton.textContent = "More Services";
+				}
 			}
 		</script>
 
@@ -333,6 +414,12 @@
 					alert('Please provide your name.');
 				}
 				return false; // Prevent the form from actually submitting
+			}
+
+
+			function toggleMoreServices() {
+				const menu = document.getElementById('more-services-menu');
+				menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 			}
 		</script>
 
