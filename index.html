@@ -138,17 +138,18 @@
 									</div>
 								</div>
 								<!-- Actions -->
-								<ul class="actions special">
-									<li><a class="button style1 large" onclick="showQuoteForm()">Request Quote</a></li>
-									<li><a class="button style1 large" id="toggleMoreBtn" onclick="showMoreServices()">More Services</a></li>
-								</ul>
+									<ul class="actions special">
+										<li><a class="button style1 large" onclick="showQuoteForm()">Request Quote</a></li>
+										<li><a class="button style1 large" id="toggleMoreBtn" onclick="showMoreServices()">More Services</a></li>
+									</ul>
 
 								<!-- Hidden Form for Request Quote -->
 								<div id="quoteFormContainer" style="display: none; margin-top: 20px;">
-									<form id="quoteForm" onsubmit="return handleQuoteSubmit()">
+									<form id="quoteForm" action="process_quote.php" method="POST">
+										<input type="hidden" name="form_type" value="request_quote">
 										<div>
 											<label for="quote-name">Name & Surname:</label><br />
-											<input type="text" id="quote-name" name="name" required /><br /><br />
+											<input type="text" id="quote-name" name="name_surname" required /><br /><br />
 										</div>
 										<div>
 											<label for="quote-email">Email Address:</label><br />
@@ -156,7 +157,7 @@
 										</div>
 										<div>
 											<label for="quote-phone">Cellphone Number:</label><br />
-											<input type="text" id="quote-phone" name="phone" required /><br /><br />
+											<input type="text" id="quote-phone" name="cellphone" required /><br /><br />
 										</div>
 										<div>
 											<label for="quote-service">Service:</label><br />
@@ -170,6 +171,12 @@
 												<option value="CCTV Security Surveillance">CCTV Security Surveillance</option>
 												<option value="Risk Control and management">Risk Control and management</option>
 												<option value="V.I.P Protection and Solutions">V.I.P Protection and Solutions</option>
+												<option value="Gate Motors">Gate Motors</option>
+												<option value="Garage Door Motors">Garage Door Motors</option>
+												<option value="Intercom Systems">Intercom Systems</option>
+												<option value="Razor Wire & Sharp Spikes">Razor Wire & Sharp Spikes</option>
+												<option value="Security Spot Lights">Security Spot Lights</option>
+												<option value="Plugs, Switches & House Light">Plugs, Switches & House Light</option>
 											</select><br /><br />
 										</div>
 										<div>
@@ -365,12 +372,12 @@
 		<script>
 			// Function to show the Request Quote form
 			function showQuoteForm() {
-			const formContainer = document.getElementById('quoteFormContainer');
-			const isVisible = formContainer.style.display === 'block';
+				const formContainer = document.getElementById('quoteFormContainer');
+				const isVisible = formContainer.style.display === 'block';
 
-			// Toggle display
-			formContainer.style.display = isVisible ? 'none' : 'block';
-		}
+				// Toggle display
+				formContainer.style.display = isVisible ? 'none' : 'block';
+			}
 
 			// Function to handle the submission of the Request Quote form
 			function handleQuoteSubmit() {
