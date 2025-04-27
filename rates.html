@@ -272,7 +272,7 @@
 						</div>
 						<div id="copyright">
 							<ul>
-								<p>&copy; 2022 Adamson Security Services. All Rights Reserved. Designed By <a href="https://www.gamechangersites.co.za" target="blank">Game Changer Sites</a></p>
+								<p class="copyright-text">&copy; <span id="current-year"></span> Adamson Security Services. All Rights Reserved. Designed By <a href="https://www.gamechangersites.co.za" target="blank">Game Changer Sites</a></p>
 							</ul>
 						</div>
 					</div>
@@ -290,7 +290,10 @@
 		
 		<!--Tawk Script-->
 		
-		
+		<!-- Current Date script -->
+		<script>
+			document.getElementById('current-year').textContent = new Date().getFullYear();
+		</script>
 		
 			
 		<!--Add To Home Script-->
