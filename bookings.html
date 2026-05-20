@@ -1,358 +1,600 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Gauteng Security Services - Adamson Security Services</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="images/favicon1.png" rel="icon"/>
-		
-		<!--Add To Home Screen Code-->
-		<link rel="manifest" href="/manifest.json">     
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff"> 
-		 <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #45a049;
-        }
-        .style2 {
-            background-color: #f44336;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        .style2:hover {
-            background-color: #d32f2f;
-        }
-    </style>
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Book A Service - Adamson Security Services</title>
+	<meta name="description" content="Book professional security services from Adamson Security Services. Fill in our quick booking form and our team will get back to you within 24 hours." />
+	<link rel="canonical" href="bookings.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Book A Service - Adamson Security Services" />
+	<meta property="og:description" content="Reliable, affordable and professional security solutions across Gauteng — book online in minutes." />
+	<meta property="og:url" content="bookings.html" />
+	<meta property="og:site_name" content="Adamson Security Services" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link href="images/favicon1.png" rel="icon"/>
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	<style>
+		/* ===== Base ===== */
+		* { box-sizing: border-box; }
+		img { max-width: 100%; height: auto; display: block; }
 
-			<!-- Header -->
-				<section id="header" class="wrapper">
+		/* ===== Grid utilities ===== */
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			margin: 0 -15px;
+		}
+		.row > [class*="col-"] { padding: 0 15px; }
+		.col-3, .col-4, .col-6, .col-9, .col-12 {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 0;
+			min-width: 0;
+		}
+		.col-3  { flex-basis: 25%;     max-width: 25%; }
+		.col-4  { flex-basis: 33.333%; max-width: 33.333%; }
+		.col-6  { flex-basis: 50%;     max-width: 50%; }
+		.col-9  { flex-basis: 75%;     max-width: 75%; }
+		.col-12 { flex-basis: 100%;    max-width: 100%; }
 
-					<!-- Logo -->
-						<div id="logo" style="color: aliceblue;">
-							<h1><a href="index.html">Adamson Security Services</a></h1>
-							<p style="color: white;">Protecting what matters most—your people, your property, and your peace of mind.</p>
-							<p style="color: white;">
-							At Adamson Security Services, we provide reliable, affordable, and professional security solutions across residential, commercial, and industrial sectors. Whether you need armed or unarmed security officers, event security, VIP protection, or risk control and management, our highly trained team is ready to deliver trusted 24/7 protection tailored to your needs.
-							</p>
+		/* ===== Container ===== */
+		.container { width: 100%; padding: 0 20px; margin: 0 auto; }
+		@media (min-width: 768px)  { .container { max-width: 750px; } }
+		@media (min-width: 992px)  { .container { max-width: 970px; } }
+		@media (min-width: 1200px) { .container { max-width: 1170px; } }
+
+		/* ===== Header / Logo ===== */
+		#masthead .row { align-items: center; }
+		#logo {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			overflow: visible;
+		}
+		#logo a { display: inline-flex; align-items: center; line-height: 0; }
+		#logo img {
+			height: 140px !important;
+			width: 100px !important;
+			max-width: 100%;
+			object-fit: contain;
+			display: block;
+		}
+
+		/* ===== Nav ===== */
+		#nav ul {
+			list-style: none;
+			display: flex !important;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 25px;
+			margin: 0;
+			padding: 0;
+		}
+		#nav ul li a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 15px;
+			letter-spacing: 0.3px;
+			transition: color .2s ease;
+		}
+		#nav ul li a:hover,
+		#nav ul li.current a { color: #f5a623; }
+
+		/* ===== Hero ===== */
+		#hero {
+			position: relative;
+			background-image:
+				linear-gradient(rgba(10,10,10,0.72), rgba(10,10,10,0.82)),
+				url('images/Adamson1.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			color: #fff;
+			padding: 110px 0 90px;
+			margin-top: 0;
+			text-align: center;
+		}
+		#hero .container { position: relative; z-index: 1; }
+		#hero h5 { color: #f5a623; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; margin-bottom: 10px; }
+		#hero h1 { font-size: 42px; line-height: 1.2; margin-bottom: 20px; text-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+		#hero p  { font-size: 16px; line-height: 1.7; opacity: .95; max-width: 820px; margin: 0 auto; text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
+
+		/* ===== Buttons ===== */
+		.actions {
+			list-style: none !important;
+			padding: 0 !important;
+			margin: 25px 0 0 0 !important;
+			display: flex !important;
+			flex-wrap: wrap !important;
+			gap: 15px !important;
+			align-items: center !important;
+			justify-content: center !important;
+		}
+		.actions li { display: inline-flex !important; margin: 0 !important; padding: 0 !important; width: auto !important; }
+		.actions li .btn-primary,
+		.actions li .btn-secondary {
+			display: inline-block !important;
+			width: auto !important;
+			padding: 14px 28px !important;
+			font-size: 15px !important;
+			font-weight: 600 !important;
+			text-align: center !important;
+			border-radius: 6px !important;
+			letter-spacing: .5px !important;
+			text-transform: uppercase !important;
+			border: 2px solid #f5a623 !important;
+			transition: all .25s ease !important;
+			text-decoration: none;
+			cursor: pointer;
+			font-family: inherit;
+		}
+		.actions li .btn-primary  { background: #f5a623 !important; color: #111 !important; }
+		.actions li .btn-secondary{ background: transparent !important; color: #fff !important; }
+		.actions li .btn-primary:hover,
+		.actions li .btn-secondary:hover { background: #fff !important; color: #111 !important; border-color: #fff !important; transform: translateY(-2px); }
+
+		/* ===== Sections ===== */
+		.wrapper { padding: 70px 0; }
+		.wrapper.style1 { background: #fff; }
+		.wrapper.style2 { background: #f7f7f9; }
+		.title {
+			text-align: center;
+			font-size: 32px;
+			font-weight: 700;
+			margin-bottom: 15px;
+			color: #222;
+		}
+		.section-intro {
+			text-align: center;
+			max-width: 820px;
+			margin: 0 auto 45px;
+			color: #555;
+			font-size: 16px;
+			line-height: 1.7;
+		}
+
+		/* ===== Booking layout ===== */
+		.booking-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: start; }
+
+		/* ===== Booking form card ===== */
+		.booking-card {
+			background: #fff;
+			border-radius: 12px;
+			box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+			padding: 36px 36px 32px;
+			border: 1px solid #eee;
+		}
+		.booking-card h2 { margin: 0 0 8px; font-size: 22px; color: #1a1a1a; }
+		.booking-card .form-intro { margin: 0 0 24px; color: #666; font-size: 14.5px; line-height: 1.6; }
+
+		.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px; }
+		.form-grid .full { grid-column: 1 / -1; }
+		.form-group label {
+			display: block;
+			font-size: 13px;
+			font-weight: 600;
+			color: #333;
+			margin-bottom: 6px;
+			letter-spacing: .3px;
+			text-transform: uppercase;
+		}
+		.form-group label .req { color: #d9534f; margin-left: 2px; }
+		.form-group input,
+		.form-group select,
+		.form-group textarea {
+			width: 100%;
+			padding: 12px 14px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			font-size: 14.5px;
+			color: #222;
+			font-family: inherit;
+			background: #fafafa;
+			transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
+		}
+		.form-group textarea { resize: vertical; min-height: 120px; }
+		.form-group input:focus,
+		.form-group select:focus,
+		.form-group textarea:focus {
+			outline: none;
+			border-color: #f5a623;
+			background: #fff;
+			box-shadow: 0 0 0 3px rgba(245,166,35,0.15);
+		}
+		.form-group select { appearance: none; -webkit-appearance: none; background-image: linear-gradient(45deg, transparent 50%, #888 50%), linear-gradient(135deg, #888 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; padding-right: 36px; }
+
+		.form-actions { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+		.btn {
+			padding: 13px 28px;
+			border-radius: 6px;
+			font-weight: 600;
+			font-size: 14.5px;
+			letter-spacing: .4px;
+			text-transform: uppercase;
+			cursor: pointer;
+			border: 2px solid transparent;
+			transition: all .2s ease;
+			font-family: inherit;
+		}
+		.btn-submit { background: #f5a623; color: #111; border-color: #f5a623; }
+		.btn-submit:hover { background: #d98e15; border-color: #d98e15; transform: translateY(-1px); }
+		.btn-reset { background: #fff; color: #555; border-color: #ddd; }
+		.btn-reset:hover { background: #f3f3f3; color: #111; border-color: #aaa; }
+
+		/* ===== Sidebar ===== */
+		.booking-sidebar { display: flex; flex-direction: column; gap: 22px; }
+		.info-card {
+			background: #fff;
+			border-radius: 12px;
+			border: 1px solid #eee;
+			padding: 26px 24px;
+			box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+		}
+		.info-card h3 { margin: 0 0 14px; font-size: 17px; color: #1a1a1a; display: flex; align-items: center; gap: 10px; }
+		.info-card h3 .ic {
+			display: inline-flex; align-items: center; justify-content: center;
+			width: 34px; height: 34px; border-radius: 50%;
+			background: #fff5e1; color: #f5a623; font-weight: 700; font-size: 16px;
+		}
+		.info-card p, .info-card a { margin: 6px 0; color: #555; font-size: 14px; line-height: 1.6; text-decoration: none; }
+		.info-card a { color: #c8841a; }
+		.info-card a:hover { text-decoration: underline; }
+		.info-card.dark { background: linear-gradient(180deg, #222 0%, #111 100%); color: #fff; border: none; }
+		.info-card.dark h3 { color: #fff; }
+		.info-card.dark h3 .ic { background: rgba(245,166,35,0.2); color: #f5a623; }
+		.info-card.dark p { color: #ddd; }
+
+		.steps { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+		.steps li {
+			position: relative;
+			padding: 10px 0 10px 42px;
+			counter-increment: step;
+			color: #444;
+			font-size: 14px;
+			line-height: 1.5;
+			border-bottom: 1px solid #f0f0f0;
+		}
+		.steps li:last-child { border-bottom: none; }
+		.steps li:before {
+			content: counter(step);
+			position: absolute;
+			left: 0;
+			top: 9px;
+			width: 28px; height: 28px;
+			background: #f5a623;
+			color: #111;
+			border-radius: 50%;
+			font-weight: 700;
+			font-size: 13px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		/* ===== CTA strip ===== */
+		#cta { background: linear-gradient(180deg, #222 0%, #111 100%); color: #fff; padding: 60px 0; text-align: center; }
+		#cta h2 { font-size: 28px; margin: 0 0 12px; }
+		#cta p { color: #ccc; max-width: 700px; margin: 0 auto 8px; font-size: 16px; line-height: 1.6; }
+
+		/* ===== Footer ===== */
+		#footer { background: #1a1a1a; color: #ddd; padding: 50px 0 20px; }
+		#footer h3 { color: #fff; margin-bottom: 15px; }
+		#footer a { color: #f5a623; text-decoration: none; }
+		#footer a:hover { text-decoration: underline; }
+		#footer ul { list-style: none; padding: 0; margin: 0; }
+		#footer ul li { margin-bottom: 8px; }
+		#copyright { text-align: center; padding-top: 25px; margin-top: 30px; border-top: 1px solid rgba(255,255,255,.1); font-size: 13px; color: #aaa; }
+		#copyright a { color: #f5a623; }
+
+		/* ============================================ */
+		/* RESPONSIVE BREAKPOINTS                       */
+		/* ============================================ */
+
+		@media (max-width: 1024px) {
+			#masthead .col-3, #masthead .col-9 {
+				flex-basis: 100%;
+				max-width: 100%;
+				text-align: center;
+			}
+			#logo { justify-content: center; margin-bottom: 15px; }
+			#nav ul { justify-content: center; gap: 18px; }
+			#hero h1 { font-size: 34px; }
+			.booking-layout { grid-template-columns: 1fr; }
+		}
+
+		@media (max-width: 768px) {
+			.wrapper { padding: 50px 0; }
+			#logo img { height: 60px !important; }
+			#nav ul { gap: 12px; }
+			#nav ul li a { font-size: 14px; }
+
+			#hero { padding: 70px 0 !important; }
+			#hero h1 { font-size: 28px; }
+			#hero p  { font-size: 15px; }
+
+			.title { font-size: 26px; }
+			.section-intro { font-size: 15px; }
+			.booking-card { padding: 28px 22px 26px; }
+
+			#footer .col-4 { flex-basis: 100%; max-width: 100%; margin-bottom: 25px; text-align: center; }
+		}
+
+		@media (max-width: 540px) {
+			.form-grid { grid-template-columns: 1fr; }
+		}
+
+		@media (max-width: 480px) {
+			.wrapper { padding: 40px 0; }
+			.container { padding: 0 15px; }
+			#logo img { height: 55px !important; }
+			#nav ul { gap: 8px 14px; }
+			#nav ul li a { font-size: 13px; }
+
+			#hero { padding: 60px 0 !important; }
+			#hero h5 { font-size: 12px; }
+			#hero h1 { font-size: 24px; }
+			#hero p  { font-size: 14px; }
+
+			.actions { flex-direction: column !important; align-items: stretch !important; width: 100%; }
+			.actions li { width: 100% !important; }
+			.actions li .btn-primary,
+			.actions li .btn-secondary { width: 100% !important; display: block !important; padding: 14px 18px !important; font-size: 14px !important; }
+
+			.title { font-size: 22px; margin-bottom: 12px; }
+			.booking-card { padding: 22px 18px 22px; }
+			.booking-card h2 { font-size: 19px; }
+
+			.form-actions { flex-direction: column; }
+			.btn { width: 100%; }
+
+			#cta h2 { font-size: 22px; }
+			#cta p  { font-size: 14px; }
+
+			#footer h3 { font-size: 16px; }
+			#footer p, #footer a { font-size: 13px; }
+			#footer .col-4 img { max-width: 160px !important; margin: 0 auto; }
+		}
+	</style>
+</head>
+
+<body class="homepage is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="masthead" class="wrapper" style="background-color: #1a1a1a; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
+			<div class="container">
+				<div class="row">
+					<div class="col-3">
+						<div id="logo">
+							<a href="index.html"><img src="images/favicon.png" alt="Adamson Security Services" /></a>
 						</div>
-
-					<!-- Nav -->
+					</div>
+					<div class="col-9">
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li class="dropdown-parent">
-									<a href="services.html" class="page-scroll">Services</a>
-									<ul class="main-dropdown">
-										<li><a href="/servicesList/eventManagement.html">Event Management</a></li>
-										<li><a href="/servicesList/securityOfficers.html">Security Officers</a></li>
-										<li><a href="/servicesList/securityConsultants.html">Security Consultants</a></li>
-										<li><a href="/servicesList/trainingProfessionals.html">Training Professionals</a></li>
-										<li><a href="/servicesList/electricGatesFences.html">Electric Gates and Fences</a></li>
-										<li><a href="/servicesList/investigatingProbing.html">Investigating and Probing</a></li>
-										<li><a href="/servicesList/securitySurveillance.html">CCTV Security Surveillance</a></li>
-										<li><a href="/servicesList/riskControlManagement.html">Risk Control and Management</a></li>
-										<li><a href="/servicesList/protectionSolutions.html">V.I.P Protection and Solutions</a></li>
-								
-										<li class="more-services">
-											<a href="javascript:void(0);">More Services &raquo;</a>
-											<ul class="nested-dropdown">
-												<li><a href="/servicesList/GateMotors.html">Gate Motors</a></li>
-												<li><a href="/servicesList/GarageDoorMotors.html">Garage Door Motors</a></li>
-												<li><a href="/servicesList/IntercomSystems.html">Intercom Systems</a></li>
-												<li><a href="/servicesList/RazorWire&SharpSpikes.html">Razor Wire & Sharp Spikes</a></li>
-												<li><a href="/servicesList/SecuritySpotLights.html">Security Spot Lights</a></li>
-												<li><a href="/servicesList/PlugsSwitches&HouseLight.html">Plugs, Switches & House Light</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="services.html">Services</a></li>
 								<li><a href="rates.html">Rates</a></li>
-								<li><a href="bookings.html">Bookings</a></li>
-								<li><a href="about.html">About Us</a></li>
+								<li class="current"><a href="bookings.html">Bookings</a></li>
 							</ul>
 						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
 
-				</section>
+		<!-- Hero -->
+		<section id="hero" class="wrapper">
+			<div class="container">
+				<h5>Reserve Your Service</h5>
+				<h1>Book A Security Service</h1>
+				<p>Tell us a little about what you need and our team will get back to you within 24 hours with a tailored proposal — whether it's for your home, business or event.</p>
+				<ul class="actions">
+					<li><a href="#booking-form" class="btn-primary">Start Booking</a></li>
+					<li><a href="services.html" class="btn-secondary">View Services</a></li>
+				</ul>
+			</div>
+		</section>
 
+		<!-- Booking Section -->
+		<section id="booking-form" class="wrapper style2">
+			<div class="container">
+				<div class="title">Make A Booking</div>
+				<p class="section-intro">Fill out the form below with your details and the service you need. One of our consultants will reach out to confirm the booking and arrange next steps.</p>
 
-			<!-- Highlights -->
-				<section id="highlights" class="wrapper style3">
-					<div class="title">Bookings</div>
-					<div class="container">
-					
-						<div class="row aln-center">
-						<p>Kindly fill out this form to book our services and we will be in touch within 24 hours.</p>
-								<section>
-										<form method="post" action="bookings.php">
-											<div class="row gtr-50">
-												<div class="col-6 col-12-small">
-													<input type="text" name="name" id="booking-name" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="text" name="surname" id="booking-surname" placeholder="Surname" />
-												</div>
-												
-												<div class="col-6 col-12-small">
-													<input type="text" name="number" id="booking-number" placeholder="Phone Number" />
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="text" name="email" id="booking-email" placeholder="Email Address" />
-												</div>
-												
-												<div class="col-6 col-12-small">
-													<select class="form-control" name="service" id="service" required>
-														<option value="">- Choose Booking Type -</option>
-														<option value="Home Services Booking">Home Services Booking</option>
-														<option value="Company Services Booking">Company Services Booking</option>
-													</select>
-												</div>
-												
-												<div class="col-6 col-12-small">
-													<select class="form-control" name="service" id="service" required>
-														<option value="">- Choose Primary Service -</option>
-														<option value="Event Management">Event Management</option>
-														<option value="Security Officers">Security Officers</option>
-														<option value="Security Consultants">Security Consultants</option>
-														<option value="Training Professionals">Training Professionals</option>
-														<option value="Electric Gates and Fences">Electric Gates and Fences</option>
-														<option value="Investigating and Probing">Investigating and Probing</option>
-														<option value="CCTV Security Surveillance">CCTV Security Surveillance</option>
-														<option value="Risk Control and management">Risk Control and management</option>
-														<option value="V.I.P Protection and Solutions">V.I.P Protection and Solutions</option>
-														<option value="Gate Motors">Gate Motors</option>
-														<option value="Garage Door Motors">Garage Door Motors</option>
-														<option value="Intercom Systems">Intercom Systems</option>
-														<option value="Razor Wire & Sharp Spikes">Razor Wire & Sharp Spikes</option>
-														<option value="Security Spot Lights">Security Spot Lights</option>
-														<option value="Plugs, Switches & House Light">Plugs, Switches & House Light</option>
-													</select>
-												</div>
-												
-												<div class="col-12">
-													<textarea name="message" id="booking-message" placeholder="Type Your Message" rows="4"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="button" class="button style1 large" value="Book Us" onclick="bookService()" /></li>
-														<li><input type="reset" class="style2" value="Clear Form" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
+				<div class="booking-layout">
+					<!-- Form -->
+					<div class="booking-card">
+						<h2>Booking Details</h2>
+						<p class="form-intro">All fields marked with <span style="color:#d9534f;">*</span> are required.</p>
+
+						<form id="bookingForm" method="post" action="bookings.php" onsubmit="return bookService(event)">
+							<div class="form-grid">
+								<div class="form-group">
+									<label for="booking-name">Name<span class="req">*</span></label>
+									<input type="text" name="name" id="booking-name" placeholder="Your first name" required />
+								</div>
+								<div class="form-group">
+									<label for="booking-surname">Surname<span class="req">*</span></label>
+									<input type="text" name="surname" id="booking-surname" placeholder="Your last name" required />
+								</div>
+
+								<div class="form-group">
+									<label for="booking-number">Phone Number<span class="req">*</span></label>
+									<input type="tel" name="number" id="booking-number" placeholder="e.g. 071 234 5678" required />
+								</div>
+								<div class="form-group">
+									<label for="booking-email">Email Address<span class="req">*</span></label>
+									<input type="email" name="email" id="booking-email" placeholder="you@example.com" required />
+								</div>
+
+								<div class="form-group">
+									<label for="booking-type">Booking Type<span class="req">*</span></label>
+									<select name="bookingType" id="booking-type" required>
+										<option value="">- Choose Booking Type -</option>
+										<option value="Home Services Booking">Home Services Booking</option>
+										<option value="Company Services Booking">Company Services Booking</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label for="booking-service">Primary Service<span class="req">*</span></label>
+									<select name="service" id="booking-service" required>
+										<option value="">- Choose Primary Service -</option>
+										<option value="Event Management">Event Management</option>
+										<option value="Security Officers">Security Officers</option>
+										<option value="Security Consultants">Security Consultants</option>
+										<option value="Training Professionals">Training Professionals</option>
+										<option value="Electric Gates and Fences">Electric Gates and Fences</option>
+										<option value="Investigating and Probing">Investigating and Probing</option>
+										<option value="CCTV Security Surveillance">CCTV Security Surveillance</option>
+										<option value="Risk Control and Management">Risk Control and Management</option>
+										<option value="V.I.P Protection and Solutions">V.I.P Protection and Solutions</option>
+										<option value="Gate Motors">Gate Motors</option>
+										<option value="Garage Door Motors">Garage Door Motors</option>
+										<option value="Intercom Systems">Intercom Systems</option>
+										<option value="Razor Wire &amp; Sharp Spikes">Razor Wire &amp; Sharp Spikes</option>
+										<option value="Security Spot Lights">Security Spot Lights</option>
+										<option value="Plugs, Switches &amp; House Light">Plugs, Switches &amp; House Light</option>
+									</select>
+								</div>
+
+								<div class="form-group full">
+									<label for="booking-message">Additional Details</label>
+									<textarea name="message" id="booking-message" rows="5" placeholder="Tell us about your property, location, preferred dates, or any specific requirements…"></textarea>
+								</div>
+							</div>
+
+							<div class="form-actions">
+								<button type="submit" class="btn btn-submit">Book Service</button>
+								<button type="reset" class="btn btn-reset">Clear Form</button>
+							</div>
+						</form>
+					</div>
+
+					<!-- Sidebar -->
+					<aside class="booking-sidebar">
+						<div class="info-card">
+							<h3><span class="ic">&#9742;</span> Need help booking?</h3>
+							<p>Speak directly with our team for urgent enquiries or to discuss complex requirements.</p>
+							<p><strong>Phone:</strong> <a href="tel:+27717750343">+27 71 775 0343</a></p>
+							<p><strong>Email:</strong> <a href="mailto:admin@adamsonsecurity.co.za">admin@adamsonsecurity.co.za</a></p>
+							<p><strong>WhatsApp:</strong> <a href="https://api.whatsapp.com/send?phone=27731172821" target="_blank" rel="noopener">+27 73 117 2821</a></p>
+						</div>
+
+						<div class="info-card">
+							<h3><span class="ic">&#9201;</span> Office Hours</h3>
+							<p><strong>Mon &ndash; Fri:</strong> 08:00 &ndash; 17:00</p>
+							<p><strong>Saturday:</strong> 09:00 &ndash; 13:00</p>
+							<p style="margin-top:10px; color:#888; font-size:13px;">Emergency response &amp; on-site security available 24/7.</p>
+						</div>
+
+						<div class="info-card dark">
+							<h3><span class="ic">&#10003;</span> How It Works</h3>
+							<ol class="steps" style="color:#ddd;">
+								<li style="color:#ddd; border-color: rgba(255,255,255,0.08);">Submit the booking form with your details.</li>
+								<li style="color:#ddd; border-color: rgba(255,255,255,0.08);">A consultant calls or emails you within 24 hours.</li>
+								<li style="color:#ddd; border-color: rgba(255,255,255,0.08);">We assess your needs and send a tailored quote.</li>
+								<li style="color:#ddd; border-color: rgba(255,255,255,0.08);">Service is scheduled and deployed on agreed date.</li>
+							</ol>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta">
+			<div class="container">
+				<h2>Not sure which service you need?</h2>
+				<p>Browse our full range of security services or get in touch — we'll help you choose the right plan for your property and budget.</p>
+				<ul class="actions">
+					<li><a href="services.html" class="btn-primary">Explore Services</a></li>
+					<li><a href="rates.html" class="btn-secondary">View Rates</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-4">
+						<h3>Adamson Security Services</h3>
+						<p>10 Deysel Road<br />16B Ezeebox Centre<br />Zandspruit, 1750</p>
+						<p>Email: <a href="mailto:admin@adamsonsecurity.co.za">admin@adamsonsecurity.co.za</a></p>
+						<p>Phone: +27 71 775 0343</p>
+					</div>
+					<div class="col-4">
+						<h3>Navigation</h3>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="rates.html">Rates</a></li>
+							<li><a href="bookings.html">Bookings</a></li>
+							<li><a href="about.html">About Us</a></li>
+						</ul>
+					</div>
+					<div class="col-4">
+						<h3>Connect with Us</h3>
+						<a href="https://api.whatsapp.com/send?phone=27731172821" class="icon brands fa-whatsapp" style="margin-right: 1rem;"></a>
+						<a href="https://www.facebook.com/Adamson-Security-Services-853483464780229" class="icon brands fa-facebook-f" style="margin-right: 1rem;"></a>
+						<a href="https://x.com/AdamsonSecure" class="icon brands fa-twitter" style="margin-right: 1rem;"></a>
+						<a href="https://www.instagram.com/adams.security/" class="icon brands fa-instagram"></a>
+						<div style="margin-top: 1.5rem;">
+							<img src="images/favicon.png" alt="Adamson Security Services Logo" style="max-width: 200px; height: auto;">
 						</div>
 					</div>
-				</section>
+				</div>
+				<div id="copyright">
+					<p>&copy; <span id="current-year"></span> Adamson Security Services. All Rights Reserved. Designed By <a href="https://www.gamechangersites.co.za">Game Changer Sites</a> &amp; <a href="https://">MegaLogic Webs</a></p>
+				</div>
+			</div>
+		</footer>
+	</div>
 
-				<!-- Footer -->
-				<section id="footer" class="wrapper">
-					<div class="title">Get In Touch</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-6 col-12-medium">
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.getElementById('current-year').textContent = new Date().getFullYear();
 
-								<!-- Contact Form -->
-								<section>
-									<form method="post" action="#" id="contactForm" onsubmit="return handleContactFormSubmit()">
-										<div class="row gtr-50">
-											<div class="col-6 col-12-small">
-												<input type="text" name="name" id="contact-name" placeholder="Name" required />
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="email" name="email" id="contact-email" placeholder="Email" required />
-											</div>
-											<div class="col-12">
-												<textarea name="message" id="contact-message" placeholder="Message" rows="4" required></textarea>
-											</div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="button style1 large" value="Send" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</section>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('service-worker.js')
+				.then(function (reg) { console.log('Service worker registered.'); })
+				.catch(function (err) { console.log('Service worker registration failed:', err); });
+		}
 
-							</div>
-							<div class="col-6 col-12-medium">
+		function bookService(e) {
+			const name = document.getElementById('booking-name').value.trim();
+			const surname = document.getElementById('booking-surname').value.trim();
+			const phone = document.getElementById('booking-number').value.trim();
+			const email = document.getElementById('booking-email').value.trim();
+			const type  = document.getElementById('booking-type').value;
+			const service = document.getElementById('booking-service').value;
 
-								<!-- Contact -->
-								<section class="feature-list small">
-									<div class="row">
-										<div class="col-6 col-12-small">
-											<section>
-												<h3 class="icon solid fa-home">Main Office</h3>
-												<p>
-													10 Deysel Road<br />
-													16B Ezeebox Centre<br />
-													Zandspruit, 1750
-												</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-small">
-											<section>
-												<h3 class="icon solid fa-comment">Social Media</h3>
-												<p>
-													<h3>    
-														<a target="blank" href="https://api.whatsapp.com/send?phone=27731172821&text=&source=&data=&app_absent=" class="icon brands fa-whatsapp"></a>
-														<a target="blank" href="https://www.facebook.com/Adamson-Security-Services-853483464780229" class="icon brands fa-facebook-f"></a>
-														<a target="blank" href="https://x.com/AdamsonSecure" class="icon brands fa-twitter"> </a>
-														<a target="blank" href="https://www.instagram.com/adams.security/" class="icon brands fa-instagram"> </a>
-													</h3>
-												</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-small">
-											<section>
-												<h3 class="icon solid fa-envelope">Email Address</h3>
-												<p>
-													<a href="mailto:admin@adamsonsecurity.co.za" target="blank">admin@adamsonsecurity.co.za</a>
-												</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-small">
-											<section>
-												<h3 class="icon solid fa-phone">General Enquiries</h3>
-												<p>
-													+27 71 775 0343<br /> +27 67 745 4093<br /> +27 73 117 2821
-												</p>
-											</section>
-										</div>
-										
-										<!-- Mbewe Group Section -->
-										<div class="col-12" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
-											<div class="row">
-												<div class="col-12">
-													<section>
-														<!-- Mbewe Group Logo Placeholder -->
-														<div style="margin-bottom: 15px; text-align: center;">
-															<!-- <div style="width: 200px; height: 80px; background: #f5f5f5; border: 2px dashed #ccc; display: inline-flex; align-items: center; justify-content: center; color: #666; margin-bottom: 15px;">
-																Mbewe Group Logo<br>
-																<small>200×80px</small>
-															</div> -->
-															<!-- Replace above div with actual logo: -->
-															<img src="./images/mbeweGroup_back.png" alt="Mbewe Group" style="max-width: 200px; height: auto; margin-bottom: 15px;"> 
-														</div>
-														
-														<h3 style="text-align: center; margin-bottom: 15px;">Part of <strong>Soiloni Mbewe Investment Holdings (Pty) Ltd</strong></h3>
-														
-														<div class="row">
-															<div class="col-6 col-12-small">
-																<section>
-																	<h3 class="icon solid fa-phone">Mbewe Group</h3>
-																	<p style="font-size: 0.9em;">
-																		082 706 4085<br />
-																		083 267 5894
-																	</p>
-																</section>
-															</div>
-															<div class="col-6 col-12-small">
-																<section>
-																	<h3 class="icon solid fa-globe">Website</h3>
-																	<p style="font-size: 0.9em;">
-																		<a href="https://www.mbewegroup.co.za" target="_blank">www.mbewegroup.co.za</a>
-																	</p>
-																</section>
-															</div>
-															<div class="col-12">
-																<section>
-																	<h3 class="icon solid fa-envelope">Email</h3>
-																	<p style="font-size: 0.9em;">
-																		<a href="mailto:admin@mbewegroup.co.za" target="_blank">admin@mbewegroup.co.za</a>
-																	</p>
-																</section>
-															</div>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
-
-							</div>
-						</div>
-						<div id="copyright">
-							<ul>
-								<p class="copyright-text">&copy; <span id="current-year"></span> Adamson Security Services. All Rights Reserved. Designed By <a href="https://www.gamechangersites.co.za" target="blank">Game Changer Sites</a></p>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-		
-		<!--Tawk Script-->
-		
-		
-		<!-- Current Date script -->
-		<script>
-			document.getElementById('current-year').textContent = new Date().getFullYear();
-		</script>
-			
-		<!--Add To Home Script-->
-		<script type="text/javascript">
-			 if ('serviceWorker' in navigator) {
-				console.log("Will the service worker register?");
-				navigator.serviceWorker.register('service-worker.js')
-				  .then(function(reg){
-					console.log("Yes, it did.");
-				 }).catch(function(err) {
-					console.log("No it didn't. This happened:", err)
-				});
+			if (!name || !surname || !phone || !email || !type || !service) {
+				alert('Please complete all required fields before booking.');
+				if (e) e.preventDefault();
+				return false;
 			}
-		</script>
 
-		<script>
-			function bookService() {
-				const nameInput = document.getElementById('booking-name').value; // Fixing the input ID
-				if (nameInput) {
-					alert(`Service Booked ${nameInput}, we will be in touch soon!`);
-					document.getElementById('bookingForm').reset(); // Ensure the form has this ID
-				} else {
-					alert('Please fill in your name before booking.');
-				}
-			}
-		</script>
-
-		<script>
-			function handleContactFormSubmit() {
-				const nameInput = document.getElementById('contact-name').value;
-				if (nameInput) {
-					alert(`Thanks for contacting us, ${nameInput}. We will be in touch soon!`);
-					document.getElementById('contactForm').reset(); // Clear the form
-				} else {
-					alert('Please provide your name.');
-				}
-				return false; // Prevent the form from actually submitting
-			}
-		</script>
-
-
-	</body>
+			alert(`Thanks ${name}, your booking for "${service}" has been received. Our team will be in touch within 24 hours.`);
+			document.getElementById('bookingForm').reset();
+			if (e) e.preventDefault();
+			return false;
+		}
+	</script>
+</body>
 </html>

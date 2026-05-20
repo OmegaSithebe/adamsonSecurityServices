@@ -1,595 +1,584 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Gauteng Security Services - Adamson Security Services</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="images/favicon1.png" rel="icon"/>
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Our Services - Adamson Security Services</title>
+	<meta name="description" content="Explore the full range of professional security services offered by Adamson Security Services across Gauteng — from armed officers and VIP protection to CCTV, electric fencing, gate motors and more." />
+	<link rel="canonical" href="services.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Our Services - Adamson Security Services" />
+	<meta property="og:description" content="Reliable, affordable and professional security solutions for residential, commercial and industrial clients." />
+	<meta property="og:url" content="services.html" />
+	<meta property="og:site_name" content="Adamson Security Services" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link href="images/favicon1.png" rel="icon"/>
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	<style>
+		/* ===== Base ===== */
+		* { box-sizing: border-box; }
+		img { max-width: 100%; height: auto; display: block; }
 
-			<!-- Header -->
-				<section id="header" class="wrapper">
+		/* ===== Grid utilities ===== */
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			margin: 0 -15px;
+		}
+		.row > [class*="col-"] { padding: 0 15px; }
+		.col-3, .col-4, .col-6, .col-9, .col-12 {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 0;
+			min-width: 0;
+		}
+		.col-3  { flex-basis: 25%;     max-width: 25%; }
+		.col-4  { flex-basis: 33.333%; max-width: 33.333%; }
+		.col-6  { flex-basis: 50%;     max-width: 50%; }
+		.col-9  { flex-basis: 75%;     max-width: 75%; }
+		.col-12 { flex-basis: 100%;    max-width: 100%; }
 
-					<!-- Logo -->
-						<div id="logo" style="color: aliceblue;">
-							<h1><a href="index.html">Adamson Security Services</a></h1>
-							<p style="color: white;">Protecting what matters most—your people, your property, and your peace of mind.</p>
-							<p style="color: white;">
-							At Adamson Security Services, we provide reliable, affordable, and professional security solutions across residential, commercial, and industrial sectors. Whether you need armed or unarmed security officers, event security, VIP protection, or risk control and management, our highly trained team is ready to deliver trusted 24/7 protection tailored to your needs.
-							</p>
+		/* ===== Container ===== */
+		.container { width: 100%; padding: 0 20px; margin: 0 auto; }
+		@media (min-width: 768px)  { .container { max-width: 750px; } }
+		@media (min-width: 992px)  { .container { max-width: 970px; } }
+		@media (min-width: 1200px) { .container { max-width: 1170px; } }
+
+		/* ===== Header / Logo ===== */
+		#masthead .row { align-items: center; }
+		#logo {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			overflow: visible;
+		}
+		#logo a { display: inline-flex; align-items: center; line-height: 0; }
+		#logo img {
+			height: 140px !important;
+			width: 100px !important;
+			max-width: 100%;
+			object-fit: contain;
+			display: block;
+		}
+
+		/* ===== Nav ===== */
+		#nav ul {
+			list-style: none;
+			display: flex !important;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 25px;
+			margin: 0;
+			padding: 0;
+		}
+		#nav ul li a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 15px;
+			letter-spacing: 0.3px;
+			transition: color .2s ease;
+		}
+		#nav ul li a:hover,
+		#nav ul li.current a { color: #f5a623; }
+
+		/* ===== Hero ===== */
+		#hero {
+			position: relative;
+			background-image:
+				linear-gradient(rgba(10,10,10,0.72), rgba(10,10,10,0.82)),
+				url('images/Security-Service.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			color: #fff;
+			padding: 110px 0 90px;
+			margin-top: 0;
+			text-align: center;
+		}
+		#hero .container { position: relative; z-index: 1; }
+		#hero h5 { color: #f5a623; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; margin-bottom: 10px; }
+		#hero h1 { font-size: 42px; line-height: 1.2; margin-bottom: 20px; text-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+		#hero p  { font-size: 16px; line-height: 1.7; opacity: .95; max-width: 820px; margin: 0 auto; text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
+
+		/* ===== Buttons ===== */
+		.actions {
+			list-style: none !important;
+			padding: 0 !important;
+			margin: 25px 0 0 0 !important;
+			display: flex !important;
+			flex-wrap: wrap !important;
+			gap: 15px !important;
+			align-items: center !important;
+			justify-content: center !important;
+		}
+		.actions li { display: inline-flex !important; margin: 0 !important; padding: 0 !important; width: auto !important; }
+		.actions li .button {
+			display: inline-block !important;
+			width: auto !important;
+			padding: 14px 28px !important;
+			font-size: 15px !important;
+			font-weight: 600 !important;
+			text-align: center !important;
+			border-radius: 6px !important;
+			letter-spacing: .5px !important;
+			text-transform: uppercase !important;
+			background: #f5a623 !important;
+			color: #111 !important;
+			border: 2px solid #f5a623 !important;
+			transition: all .25s ease !important;
+			text-decoration: none;
+		}
+		.actions li:nth-child(2) .button { background: transparent !important; color: #fff !important; }
+		.actions li .button:hover { background: #fff !important; color: #111 !important; border-color: #fff !important; transform: translateY(-2px); }
+
+		/* ===== Sections ===== */
+		.wrapper { padding: 70px 0; }
+		.wrapper.style1 { background: #fff; }
+		.wrapper.style2 { background: #f7f7f9; }
+		.wrapper.style3 { background: #fff; }
+		.title {
+			text-align: center;
+			font-size: 32px;
+			font-weight: 700;
+			margin-bottom: 15px;
+			color: #222;
+		}
+		.section-intro {
+			text-align: center;
+			max-width: 820px;
+			margin: 0 auto 45px;
+			color: #555;
+			font-size: 16px;
+			line-height: 1.7;
+		}
+
+		/* ===== Service cards ===== */
+		.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+		.service-card {
+			background: #fff;
+			border-radius: 10px;
+			overflow: hidden;
+			box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+			display: flex;
+			flex-direction: column;
+			transition: transform .25s ease, box-shadow .25s ease;
+			border: 1px solid #eee;
+		}
+		.service-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
+		.service-card .card-img { width: 100%; height: 200px; overflow: hidden; }
+		.service-card .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+		.service-card:hover .card-img img { transform: scale(1.05); }
+		.service-card .card-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex-grow: 1; }
+		.service-card h3 { font-size: 18px; color: #1a1a1a; margin: 0 0 10px; line-height: 1.3; }
+		.service-card p { font-size: 14.5px; line-height: 1.65; color: #555; margin: 0 0 18px; flex-grow: 1; }
+		.service-card .card-link {
+			align-self: flex-start;
+			color: #f5a623;
+			font-weight: 600;
+			font-size: 14px;
+			text-decoration: none;
+			letter-spacing: .3px;
+			text-transform: uppercase;
+			border-bottom: 2px solid transparent;
+			padding-bottom: 2px;
+			transition: border-color .2s ease, color .2s ease;
+		}
+		.service-card .card-link:hover { color: #c8841a; border-color: #f5a623; }
+
+		/* ===== Why choose us strip ===== */
+		.why-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 30px; }
+		.why-item { text-align: center; padding: 22px 16px; background: #fff; border-radius: 10px; border: 1px solid #eee; }
+		.why-item .why-icon {
+			width: 56px; height: 56px; border-radius: 50%;
+			background: #f5a623; color: #111; font-weight: 700; font-size: 22px;
+			display: inline-flex; align-items: center; justify-content: center;
+			margin-bottom: 14px;
+		}
+		.why-item h4 { margin: 0 0 8px; font-size: 16px; color: #1a1a1a; }
+		.why-item p { margin: 0; font-size: 13.5px; color: #666; line-height: 1.55; }
+
+		/* ===== CTA strip ===== */
+		#cta { background: linear-gradient(180deg, #222 0%, #111 100%); color: #fff; padding: 60px 0; text-align: center; }
+		#cta h2 { font-size: 28px; margin: 0 0 12px; }
+		#cta p { color: #ccc; max-width: 700px; margin: 0 auto 8px; font-size: 16px; line-height: 1.6; }
+
+		/* ===== Footer ===== */
+		#footer { background: #1a1a1a; color: #ddd; padding: 50px 0 20px; }
+		#footer h3 { color: #fff; margin-bottom: 15px; }
+		#footer a { color: #f5a623; text-decoration: none; }
+		#footer a:hover { text-decoration: underline; }
+		#footer ul { list-style: none; padding: 0; margin: 0; }
+		#footer ul li { margin-bottom: 8px; }
+		#copyright { text-align: center; padding-top: 25px; margin-top: 30px; border-top: 1px solid rgba(255,255,255,.1); font-size: 13px; color: #aaa; }
+		#copyright a { color: #f5a623; }
+
+		/* ============================================ */
+		/* RESPONSIVE BREAKPOINTS                       */
+		/* ============================================ */
+
+		@media (max-width: 1024px) {
+			#masthead .col-3, #masthead .col-9 {
+				flex-basis: 100%;
+				max-width: 100%;
+				text-align: center;
+			}
+			#logo { justify-content: center; margin-bottom: 15px; }
+			#nav ul { justify-content: center; gap: 18px; }
+			#hero h1 { font-size: 34px; }
+			.service-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+			.why-list { grid-template-columns: repeat(2, 1fr); }
+		}
+
+		@media (max-width: 768px) {
+			.wrapper { padding: 50px 0; }
+			#logo img { height: 60px !important; }
+			#nav ul { gap: 12px; }
+			#nav ul li a { font-size: 14px; }
+
+			#hero { padding: 50px 0 !important; }
+			#hero h1 { font-size: 28px; }
+			#hero p  { font-size: 15px; }
+
+			.title { font-size: 26px; }
+			.section-intro { font-size: 15px; }
+
+			#footer .col-4 { flex-basis: 100%; max-width: 100%; margin-bottom: 25px; text-align: center; }
+		}
+
+		@media (max-width: 540px) {
+			.service-grid { grid-template-columns: 1fr; gap: 22px; }
+			.service-card .card-img { height: 220px; }
+		}
+
+		@media (max-width: 480px) {
+			.wrapper { padding: 40px 0; }
+			.container { padding: 0 15px; }
+			#logo img { height: 55px !important; }
+			#nav ul { gap: 8px 14px; }
+			#nav ul li a { font-size: 13px; }
+
+			#hero { padding: 40px 0 !important; }
+			#hero h5 { font-size: 12px; }
+			#hero h1 { font-size: 24px; }
+			#hero p  { font-size: 14px; }
+
+			.actions { flex-direction: column !important; align-items: stretch !important; width: 100%; }
+			.actions li { width: 100% !important; }
+			.actions li .button { width: 100% !important; display: block !important; padding: 14px 18px !important; font-size: 14px !important; }
+
+			.title { font-size: 22px; margin-bottom: 12px; }
+			.why-list { grid-template-columns: 1fr; }
+
+			#cta h2 { font-size: 22px; }
+			#cta p  { font-size: 14px; }
+
+			#footer h3 { font-size: 16px; }
+			#footer p, #footer a { font-size: 13px; }
+			#footer .col-4 img { max-width: 160px !important; margin: 0 auto; }
+		}
+	</style>
+</head>
+
+<body class="homepage is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="masthead" class="wrapper" style="background-color: #1a1a1a; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
+			<div class="container">
+				<div class="row">
+					<div class="col-3">
+						<div id="logo">
+							<a href="index.html"><img src="images/favicon.png" alt="Adamson Security Services" /></a>
 						</div>
-
-					<!-- Nav -->
+					</div>
+					<div class="col-9">
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li class="dropdown-parent">
-									<a href="#main" class="page-scroll">Services</a>
-									<ul class="main-dropdown">
-										<li><a href="/servicesList/eventManagement.html">Event Management</a></li>
-										<li><a href="/servicesList/securityOfficers.html">Security Officers</a></li>
-										<li><a href="/servicesList/securityConsultants.html">Security Consultants</a></li>
-										<li><a href="/servicesList/trainingProfessionals.html">Training Professionals</a></li>
-										<li><a href="/servicesList/electricGatesFences.html">Electric Gates and Fences</a></li>
-										<li><a href="/servicesList/investigatingProbing.html">Investigating and Probing</a></li>
-										<li><a href="/servicesList/securitySurveillance.html">CCTV Security Surveillance</a></li>
-										<li><a href="/servicesList/riskControlManagement.html">Risk Control and Management</a></li>
-										<li><a href="/servicesList/protectionSolutions.html">V.I.P Protection and Solutions</a></li>
-								
-										<li class="more-services">
-											<a href="javascript:void(0);">More Services &raquo;</a>
-											<ul class="nested-dropdown">
-												<li><a href="/servicesList/GateMotors.html">Gate Motors</a></li>
-												<li><a href="/servicesList/GarageDoorMotors.html">Garage Door Motors</a></li>
-												<li><a href="/servicesList/IntercomSystems.html">Intercom Systems</a></li>
-												<li><a href="/servicesList/RazorWire&SharpSpikes.html">Razor Wire & Sharp Spikes</a></li>
-												<li><a href="/servicesList/SecuritySpotLights.html">Security Spot Lights</a></li>
-												<li><a href="/servicesList/PlugsSwitches&HouseLight.html">Plugs, Switches & House Light</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
+								<li><a href="index.html">Home</a></li>
+								<li class="current"><a href="services.html">Services</a></li>
 								<li><a href="rates.html">Rates</a></li>
 								<li><a href="bookings.html">Bookings</a></li>
-								<li><a href="about.html">About Us</a></li>
 							</ul>
 						</nav>
-
-				</section>
-
-			<!-- Main -->
-			
-				<div id="officers" class="wrapper style2">
-					<div class="title">Security Officers</div>
-					<div class="container">
-
-						<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Highly trained security officers with unique tactical skills, to ensure your safety</p>
-									</header>
-									<img src="images/Adamson1.jpg" class="image featured" alt="Security Officers" />
-									
-									<p>At Adamson Security Services, our security officers are rigorously trained professionals who serve as the first line of defense for your business, property, or event. Each officer is equipped with the knowledge and experience to handle a variety of on-site situations, from routine access control to conflict de-escalation. Whether stationed at entrances, patrolling premises, or monitoring activities, our officers provide a visible and proactive security presence that deters threats and ensures safety.</p>
-									<p>Our personnel are vetted for integrity, discipline, and professionalism, and can be tailored to suit both low-risk and high-risk environments. We offer uniformed or plainclothes officers for retail, corporate, industrial, residential, and public settings. With 24/7 availability and a strong incident reporting protocol, Adamson Security Officers don’t just guard your premises—they elevate your peace of mind.</p>
-									
-								</article>
-							</div>
 					</div>
-				</div>
-				
-				<section id="consultants" class="wrapper style3">
-					<div class="title">Security Consulting</div>
-					
-						<div class="container">
-						<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Best officers in town, highly trained and have specialised skills to ensure your home and office safety</p>
-									</header>
-									<img src="images/securityConsultants.jpg" class="image featured" alt="Security Consulting" />
-									
-									<p>Our Security Consulting services are designed to assess vulnerabilities, mitigate risks, and develop customized security strategies that align with your organization's specific needs. Adamson Security Services provides expert analysis of physical infrastructure, personnel protocols, and operational risks, followed by actionable recommendations to strengthen your security posture.</p>
-									<p>Whether you require guidance on workplace safety, facility design, emergency response planning, or access control systems, our consultants bring decades of experience and insight to every engagement. We collaborate with your leadership to build resilient environments that support both safety and productivity—ensuring your assets, employees, and stakeholders are protected with precision and foresight.</p>
-									
-								</article>
-							</div>
-							
-
-					</div>
-					
-				</section>
-				
-				<div id="event_management" class="wrapper style2">
-					<div class="title">Event Management</div>
-					<div class="container">
-
-						<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Big or small event, we manage them like professionals adn treat them as our top priority</p>
-									</header>
-									<img src="images/Security-Service.jpg" class="image featured" alt="Event Management" />
-									
-									<p>Security is crucial to the success of any public or private event. Our Event Management division specializes in delivering secure environments for concerts, festivals, corporate functions, sporting events, and VIP gatherings. We handle access control, crowd management, perimeter enforcement, and emergency response protocols with discretion and efficiency.</p>
-									<p>From initial planning to on-the-ground execution, Adamson Security Services ensures your event is protected without compromising the guest experience. Our teams coordinate with event organizers, law enforcement, and emergency services to manage risk, control traffic, and respond rapidly to incidents. We create safe, seamless environments where your event can thrive.</p>
-									
-								</article>
-							</div>
-						</div>
-				</div>
-			
-				<section id="traininf" class="wrapper style3">
-					<div class="title">Training Professionals</div>
-					<div class="container">
-					<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Beginner to professional, we take you through all the processes required to be one of the best security officer</p>
-									</header>
-									<img src="images/securityTraining.jpg" class="image featured" alt="Training Professionals" />
-									
-									<p>We don’t just deploy security teams—we build them. Adamson Security Services offers specialized training programs for aspiring and active security professionals. Our certified instructors deliver practical and theoretical training in areas such as threat assessment, defensive tactics, access control, customer service, and legal compliance.</p>
-									<p>Our training is designed to produce confident, capable, and compliant officers who are ready to adapt to any environment. Whether you’re new to the field or a veteran looking to upgrade your skills, our professional training courses will prepare you for success in a highly demanding and evolving industry. Your security expertise begins with our commitment to excellence.</p>
-									
-								</article>
-							</div>
-				
-					</div>
-				</section>
-				
-				<div id="investing_probing" class="wrapper style2">
-					<div class="title">Investigating and Probing</div>
-				
-					<div class="container">
-
-						<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>We have specialised skills in researching with a unique and new technology that just came in town</p>
-									</header>
-									<img src="images/investigatingProbing2.jpg" class="image featured" alt="Investigating and Probing" />
-									
-									<p>When the situation calls for deeper insight, Adamson Security Services provides professional investigative services tailored to corporate, legal, and private needs. Our discreet investigators specialize in surveillance, fraud detection, background checks, internal investigations, and more. We operate within legal boundaries to gather factual, actionable intelligence that supports informed decisions.</p>
-									<p>Whether it’s resolving workplace incidents, uncovering theft, or supporting litigation efforts, our probing services are thorough, unbiased, and confidential. With keen attention to detail and a methodical approach, we help uncover the truth while maintaining the highest levels of professionalism and integrity.</p>
-									
-								</article>
-							</div>
-					</div>
-				</div>
-			
-				<section id="cctv" class="wrapper style3">
-					<div class="title">CCTV Security Surveillance</div>
-					<div class="container">
-					<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>We provide up to standard CCTV's for either your home or office with equiped technology for real time surveillance</p>
-									</header>
-									<img src="images/CCTVSecuritySystems2.jpg" class="image featured" alt="CCTV Security Surveillance" />
-									
-									<p>In today’s environment, proactive surveillance is key to preventing threats before they escalate. Adamson Security Services provides comprehensive CCTV installation, monitoring, and maintenance solutions for homes, businesses, and institutions. Our systems are designed to offer 24/7 visual coverage, motion detection, remote access, and recording capabilities.</p>
-									<p>Our surveillance team monitors live feeds in real time, ensuring immediate action can be taken when suspicious activity is detected. Whether integrated into existing infrastructure or built from scratch, our CCTV solutions provide an essential layer of security that deters crime, captures evidence, and gives you full situational awareness—anytime, anywhere.</p>
-									
-								</article>
-							</div>
-					</div>
-				</section>
-				
-				<div id="gates_fences" class="wrapper style2">
-					<div class="title">Electric Gates and Fences</div>
-				
-					<div class="container">
-					<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Get protected within and outside your compound with our fully equiped electric fences and gates</p>
-									</header>
-									<img src="images/electricGatesFences.jpeg" class="image featured" alt="Electric Gates and Fences" />
-									
-									<p>At Adamson Security Services, we specialize in the installation and maintenance of high-quality electric gates and fencing solutions that provide both physical security and visual deterrence. Our systems are designed for residential, commercial, and industrial clients seeking controlled access, perimeter protection, and peace of mind. Built for durability and performance, our gates can be integrated with intercoms, remote access, and advanced security systems for enhanced control.</p>
-									<p>Whether you're securing a private residence, warehouse, office park, or complex, our electric gates and fencing solutions are tailored to fit your property and budget. We offer sliding, swing, and boom gates, all reinforced to prevent unauthorized entry. With professional installation and regular servicing from our expert team, we ensure your perimeter remains secure—day and night.</p>
-									
-								</article>
-							</div>
-				
-					</div>
-				</div>
-			
-				<section id="risk_control" class="wrapper style3">
-					<div class="title">Risk Control and Management</div>
-					<div class="container">
-					<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Our higly trained risk management specialists detects risk miles away and ensure your protectiona and safety</p>
-									</header>
-									<img src="images/eventManagement.jpg" class="image featured" alt="Risk Control and Management" />
-									
-									<p>Risk control is about more than just identifying threats—it’s about anticipating them before they happen. At Adamson Security Services, our Risk Control and Management specialists are trained to detect, assess, and neutralize risks across various sectors, including corporate, industrial, retail, and public spaces. We provide thorough on-site evaluations, security audits, and preventive strategies to mitigate both internal and external threats.</p>
-									<p>Our approach includes policy development, staff training, contingency planning, and threat intelligence gathering. From theft prevention to emergency evacuation protocols, we help you create a safer environment with long-term risk resilience. Whether you're dealing with high-value assets or sensitive information, our proactive risk control measures ensure that you stay one step ahead.</p>
-									
-								</article>
-							</div>
-					</div>
-					<br/>
-				</section>
-				
-				<div id="protection" class="wrapper style2">
-					<div class="title">V.I.P Protection and Solutions</div>
-					<div class="container">
-					<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Private and Special events are both covered in our plans</p>
-									</header>
-									<img src="images/VIPProtectionSolutions4.png" class="image featured" alt="V.I.P Protection and Solutions" />
-									
-									<p>When it comes to high-profile individuals, security must be discreet, responsive, and reliable. Adamson Security Services offers elite V.I.P Protection and Solutions tailored to executives, dignitaries, celebrities, and high-risk individuals. Our close protection officers are trained in defensive driving, threat neutralization, situational awareness, and conflict avoidance, ensuring the safety of clients without disrupting their routines or public engagements.</p>
-									<p>We conduct thorough route planning, risk assessments, and background checks, offering secure transport, residential protection, and event coverage as needed. Whether for daily movement, business functions, or international travel, our V.I.P protection teams deliver unmatched professionalism and discretion. With Adamson, you're not just protected—you’re prioritized.</p>
-									
-								</article>
-							</div>
-					</div>					
-				</div>
-
-				<!-- More Services Toggle Button -->
-				<div style="text-align: center; margin-top: 1rem; margin-bottom: 4rem;">
-				<button id="toggleButton" onclick="toggleMoreServices()" style="padding: 4px 10px; font-size: 1rem;">
-					More Services
-				</button>
-				</div>
-
-			<div id="moreServices" style="display: none; margin-top: 2rem;">
-				<section id="risk_control" class="wrapper style3">
-					<div class="title">Gate Motors</div>
-					<div class="container">
-					<!-- Content -->
-							<div id="content">	
-								<article class="box post">
-									<header class="style1">
-										<p>Effortless access control with durable, high-performance gate automation systems</p>
-									</header>
-									<img src="images/Motor-Gate-Banner.jpg" class="image featured" alt="Gate Motors" />
-									
-									<p>At Adamson Security Services, we supply and install robust gate motors designed for both residential and commercial security needs. Our motors are built to withstand high usage and environmental wear, ensuring reliable operation and smooth access control. Whether you’re automating a sliding or swing gate, we offer leading brands and smart control options for optimal convenience and protection.</p>
-									<p>Our gate automation services also include backup power solutions for load-shedding and power outages, keeping your access secure around the clock. With professional installation, remote controls, and optional smartphone integration, we make controlling your property's entry points secure, simple, and efficient.</p>
-									
-								</article>
-							</div>
-					</div>
-					<br/>
-				</section>
-				
-				<div id="protection" class="wrapper style2">
-					<div class="title">Garage Door Motors</div>
-					<div class="container">
-					<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Secure and seamless garage access with modern motorized door systems</p>
-									</header>
-									<img src="images/garage-door-motor-repair.jpg" class="image featured" alt="Garage Door Motors" />
-									
-									<p>Our garage door motor solutions provide safe and easy access to your home or business, while enhancing perimeter security. At Adamson Security Services, we install and service a wide range of motors compatible with roll-up, sectional, and tip-up garage doors. Each unit is selected for durability, safety features, and quiet operation.</p>
-									<p>We offer automation that includes remote control access, obstacle detection, and battery backup options. Our trained technicians ensure proper setup and maintenance, helping you avoid security risks caused by manual doors or mechanical failures. Protect your garage entry with a system that’s both secure and user-friendly.</p>
-									
-								</article>
-							</div>
-					</div>					
-				</div>
-
-				<section id="risk_control" class="wrapper style3">
-					<div class="title">Intercom Systems</div>
-					<div class="container">
-					<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Stay in control of visitor access with crystal-clear audio and video intercom solutions</p>
-									</header>
-									<img src="images/intercom-system.jpg" class="image featured" alt="" />
-									
-									<p>Intercom systems are essential for verifying and managing visitor entry. We offer both wired and wireless intercom solutions, including audio-only, video, and GSM-based systems for residential, commercial, and gated communities. Our intercom installations help improve security by allowing you to screen guests before granting access, reducing the risk of unauthorized entry.</p>
-									<p>Integrated with electric gates, doors, or security offices, our intercom systems provide seamless communication and access management. Whether you need a simple doorbell system or a full video entry solution, Adamson Security Services will customize it to fit your property's layout and your preferred level of control.</p>
-									
-								</article>
-							</div>
-					</div>
-					<br/>
-				</section>
-				
-				<div id="protection" class="wrapper style2">
-					<div class="title">Razor Wire & Sharp Spikes</div>
-					<div class="container">
-					<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Maximum perimeter defense with industrial-grade physical security barriers</p>
-									</header>
-									<img src="images/razor-wire-home_2.jpg" class="image featured" alt="Razor Wire & Sharp Spikes" />
-									
-									<p>When it comes to physical deterrence, nothing is more effective than razor wire and anti-climb spikes. Adamson Security Services installs high-tensile, corrosion-resistant razor wire and stainless-steel spikes to prevent unauthorized access and trespassing. These solutions are ideal for walls, fences, gates, and other vulnerable points around your premises.</p>
-									<p>We tailor installations to meet your safety regulations and property aesthetics, offering options such as flat-wrap coils, concertina razor wire, and modular spike strips. Our products are trusted by residential complexes, schools, warehouses, and government facilities looking to enforce boundary control with long-lasting impact.</p>
-									
-								</article>
-							</div>
-					</div>					
-				</div>
-
-				<section id="risk_control" class="wrapper style3">
-					<div class="title">Security Spot Lights</div>
-					<div class="container">
-					<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Illuminate and protect—enhance visibility and deter threats with motion-activated lighting</p>
-									</header>
-									<img src="images/security-spot-lights.jpg" class="image featured" alt="Security Spot Lights" />
-									
-									<p>Proper lighting is one of the simplest yet most powerful deterrents against crime. Adamson Security Services offers professional installation of motion-activated security spotlights for homes, businesses, and open premises. Our high-lumen, weatherproof lighting systems enhance visibility at night and trigger automatically in response to movement, reducing hiding spots for intruders.</p>
-									<p>We assess your property’s dark zones and entry points to position spotlights for maximum effect. Integrated with alarm systems or CCTV, these lights are not only a deterrent but a responsive tool in your security infrastructure. Energy-efficient and reliable, they add an essential layer of defense to any setting.</p>
-									
-								</article>
-							</div>
-					</div>
-					<br/>
-				</section>
-				
-				<div id="protection" class="wrapper style2">
-					<div class="title">Plugs, Switches & House Light</div>
-					<div class="container">
-					<!-- Content -->
-							<div id="content">
-								<article class="box post">
-									<header class="style1">
-										<p>Safe, efficient, and modern electrical fittings for security and convenience</p>
-									</header>
-									<img src="images/switches-lights.png" class="image featured" alt="Plugs, Switches & House Light" />
-									
-									<p>Beyond surveillance and physical barriers, internal electrical systems play a key role in creating a secure environment. Adamson Security Services provides installation and upgrades for electrical fixtures including plugs, light switches, and house lighting. Whether you’re enhancing safety lighting, connecting security equipment, or modernizing your property’s aesthetic, we ensure your installations are compliant and robust.</p>
-									<p>Our electricians prioritize safety and quality, using SABS-approved products and wiring standards. We support custom configurations for interior and exterior lighting, enabling full integration with alarm systems, timers, or smart home controls. It's not just about power—it’s about peace of mind.</p>
-									
-								</article>
-							</div>
-					</div>					
 				</div>
 			</div>
-			
-			
-				<!-- Footer -->
-				<section id="footer" class="wrapper">
-					<div class="title">Get In Touch</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-6 col-12-medium">
+		</header>
 
-								<!-- Contact Form -->
-								<section>
-									<form method="post" action="#" id="contactForm" onsubmit="return handleContactFormSubmit()">
-										<div class="row gtr-50">
-											<div class="col-6 col-12-small">
-												<input type="text" name="name" id="contact-name" placeholder="Name" required />
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="email" name="email" id="contact-email" placeholder="Email" required />
-											</div>
-											<div class="col-12">
-												<textarea name="message" id="contact-message" placeholder="Message" rows="4" required></textarea>
-											</div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="button style1 large" value="Send" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</section>
+		<!-- Hero -->
+		<section id="hero" class="wrapper">
+			<div class="container">
+				<h5>What We Offer</h5>
+				<h1>Our Security Services</h1>
+				<p>A complete range of professional, tailored security solutions for residential, commercial and industrial clients across Gauteng — backed by trained personnel, modern technology and 24/7 support.</p>
+				<ul class="actions">
+					<li><a href="bookings.html" class="button">Book A Service</a></li>
+					<li><a href="#footer" class="button">Get In Touch</a></li>
+				</ul>
+			</div>
+		</section>
 
-							</div>
-							<div class="col-6 col-12-medium">
+		<!-- Core Services -->
+		<section id="core-services" class="wrapper style2">
+			<div class="container">
+				<div class="title">Core Security Services</div>
+				<p class="section-intro">Our flagship services form the backbone of what we do — trusted protection delivered by trained professionals who put your safety first.</p>
 
-								<!-- Contact -->
-								<section class="feature-list small">
-									<div class="row">
-										<div class="col-6 col-12-small">
-											<section>
-												<h3 class="icon solid fa-home">Main Office</h3>
-												<p>
-													10 Deysel Road<br />
-													16B Ezeebox Centre<br />
-													Zandspruit, 1750
-												</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-small">
-											<section>
-												<h3 class="icon solid fa-comment">Social Media</h3>
-												<p>
-													<h3>    
-														<a target="blank" href="https://api.whatsapp.com/send?phone=27731172821&text=&source=&data=&app_absent=" class="icon brands fa-whatsapp"></a>
-														<a target="blank" href="https://www.facebook.com/Adamson-Security-Services-853483464780229" class="icon brands fa-facebook-f"></a>
-														<a target="blank" href="https://x.com/AdamsonSecure" class="icon brands fa-twitter"> </a>
-														<a target="blank" href="https://www.instagram.com/adams.security/" class="icon brands fa-instagram"> </a>
-													</h3>
-												</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-small">
-											<section>
-												<h3 class="icon solid fa-envelope">Email Address</h3>
-												<p>
-													<a href="mailto:admin@adamsonsecurity.co.za" target="blank">admin@adamsonsecurity.co.za</a>
-												</p>
-											</section>
-										</div>
-										<div class="col-6 col-12-small">
-											<section>
-												<h3 class="icon solid fa-phone">General Enquiries</h3>
-												<p>
-													+27 71 775 0343<br /> +27 67 745 4093<br /> +27 73 117 2821
-												</p>
-											</section>
-										</div>
-										
-										<!-- Mbewe Group Section -->
-										<div class="col-12" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
-											<div class="row">
-												<div class="col-12">
-													<section>
-														<!-- Mbewe Group Logo Placeholder -->
-														<div style="margin-bottom: 15px; text-align: center;">
-															<!-- <div style="width: 200px; height: 80px; background: #f5f5f5; border: 2px dashed #ccc; display: inline-flex; align-items: center; justify-content: center; color: #666; margin-bottom: 15px;">
-																Mbewe Group Logo<br>
-																<small>200×80px</small>
-															</div> -->
-															<!-- Replace above div with actual logo: -->
-															<img src="./images/mbeweGroup_back.png" alt="Mbewe Group" style="max-width: 200px; height: auto; margin-bottom: 15px;"> 
-														</div>
-														
-														<h3 style="text-align: center; margin-bottom: 15px;">Part of <strong>Soiloni Mbewe Investment Holdings (Pty) Ltd</strong></h3>
-														
-														<div class="row">
-															<div class="col-6 col-12-small">
-																<section>
-																	<h3 class="icon solid fa-phone">Mbewe Group</h3>
-																	<p style="font-size: 0.9em;">
-																		082 706 4085<br />
-																		083 267 5894
-																	</p>
-																</section>
-															</div>
-															<div class="col-6 col-12-small">
-																<section>
-																	<h3 class="icon solid fa-globe">Website</h3>
-																	<p style="font-size: 0.9em;">
-																		<a href="https://www.mbewegroup.co.za" target="_blank">www.mbewegroup.co.za</a>
-																	</p>
-																</section>
-															</div>
-															<div class="col-12">
-																<section>
-																	<h3 class="icon solid fa-envelope">Email</h3>
-																	<p style="font-size: 0.9em;">
-																		<a href="mailto:admin@mbewegroup.co.za" target="_blank">admin@mbewegroup.co.za</a>
-																	</p>
-																</section>
-															</div>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
+				<div class="service-grid">
 
-							</div>
+					<article class="service-card">
+						<div class="card-img"><img src="images/Adamson1.jpg" alt="Security Officers" /></div>
+						<div class="card-body">
+							<h3>Security Officers</h3>
+							<p>Vetted, disciplined armed and unarmed officers providing visible 24/7 presence, access control, patrols and rapid on-site response across all sectors.</p>
+							<a class="card-link" href="servicesList/securityOfficers.html">Learn More &rarr;</a>
 						</div>
-						<div id="copyright">
-							<ul>
-								<p class="copyright-text">&copy; <span id="current-year"></span> Adamson Security Services. All Rights Reserved. Designed By <a href="https://www.gamechangersites.co.za" target="blank">Game Changer Sites</a></p>
-							</ul>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/securityConsultants.jpg" alt="Security Consulting" /></div>
+						<div class="card-body">
+							<h3>Security Consulting</h3>
+							<p>Expert risk assessments, infrastructure reviews and tailored strategies that strengthen your security posture from the ground up.</p>
+							<a class="card-link" href="servicesList/securityConsultants.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/Security-Service.jpg" alt="Event Management" /></div>
+						<div class="card-body">
+							<h3>Event Management</h3>
+							<p>End-to-end security for concerts, corporate functions and VIP gatherings — crowd control, access management and rapid incident response.</p>
+							<a class="card-link" href="servicesList/eventManagement.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/securityTraining.jpg" alt="Training Professionals" /></div>
+						<div class="card-body">
+							<h3>Training Professionals</h3>
+							<p>Certified, practical training in threat assessment, defensive tactics, access control and compliance — for beginners and seasoned officers alike.</p>
+							<a class="card-link" href="servicesList/trainingProfessionals.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/investigatingProbing2.jpg" alt="Investigating and Probing" /></div>
+						<div class="card-body">
+							<h3>Investigating &amp; Probing</h3>
+							<p>Discreet surveillance, fraud detection, background checks and internal investigations delivering factual, actionable intelligence.</p>
+							<a class="card-link" href="servicesList/investigatingProbing.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/CCTVSecuritySystems2.jpg" alt="CCTV Security Surveillance" /></div>
+						<div class="card-body">
+							<h3>CCTV Surveillance</h3>
+							<p>Installation, monitoring and maintenance of modern CCTV systems with 24/7 visual coverage, motion detection and remote access.</p>
+							<a class="card-link" href="servicesList/securitySurveillance.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/electricGatesFences.jpeg" alt="Electric Gates and Fences" /></div>
+						<div class="card-body">
+							<h3>Electric Gates &amp; Fences</h3>
+							<p>Durable, professionally installed electric gates and fencing — sliding, swing and boom options integrated with modern access systems.</p>
+							<a class="card-link" href="servicesList/electricGatesFences.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/eventManagement.jpg" alt="Risk Control and Management" /></div>
+						<div class="card-body">
+							<h3>Risk Control &amp; Management</h3>
+							<p>Proactive identification, assessment and mitigation of threats — security audits, policy development and long-term resilience planning.</p>
+							<a class="card-link" href="servicesList/riskControlManagement.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/VIPProtectionSolutions4.png" alt="V.I.P Protection and Solutions" /></div>
+						<div class="card-body">
+							<h3>V.I.P Protection</h3>
+							<p>Elite close protection for executives, dignitaries and high-risk individuals — discreet, professional and tactically prepared.</p>
+							<a class="card-link" href="servicesList/protectionSolutions.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Additional Services -->
+		<section id="more-services" class="wrapper style1">
+			<div class="container">
+				<div class="title">Additional Services</div>
+				<p class="section-intro">From access automation to perimeter defense and electrical fittings — complete supporting solutions to round out your security setup.</p>
+
+				<div class="service-grid">
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/Motor-Gate-Banner.jpg" alt="Gate Motors" /></div>
+						<div class="card-body">
+							<h3>Gate Motors</h3>
+							<p>Robust automation for sliding and swing gates, with smart controls and backup power options for uninterrupted access.</p>
+							<a class="card-link" href="servicesList/GateMotors.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/garage-door-motor-repair.jpg" alt="Garage Door Motors" /></div>
+						<div class="card-body">
+							<h3>Garage Door Motors</h3>
+							<p>Safe, quiet and reliable motor systems for roll-up, sectional and tip-up garage doors, with remote and obstacle-detection features.</p>
+							<a class="card-link" href="servicesList/GarageDoorMotors.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/intercom-system.jpg" alt="Intercom Systems" /></div>
+						<div class="card-body">
+							<h3>Intercom Systems</h3>
+							<p>Audio, video and GSM intercom solutions that let you screen and manage visitor access from anywhere on the property.</p>
+							<a class="card-link" href="servicesList/IntercomSystems.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/razor-wire-home_2.jpg" alt="Razor Wire and Sharp Spikes" /></div>
+						<div class="card-body">
+							<h3>Razor Wire &amp; Spikes</h3>
+							<p>High-tensile razor wire and stainless-steel spikes for maximum perimeter deterrence on walls, fences and vulnerable entry points.</p>
+							<a class="card-link" href="servicesList/RazorWire&SharpSpikes.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/security-spot-lights.jpg" alt="Security Spot Lights" /></div>
+						<div class="card-body">
+							<h3>Security Spot Lights</h3>
+							<p>Motion-activated, high-lumen weatherproof lighting that deters intruders and enhances CCTV and alarm effectiveness.</p>
+							<a class="card-link" href="servicesList/SecuritySpotLights.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+					<article class="service-card">
+						<div class="card-img"><img src="images/switches-lights.png" alt="Plugs, Switches and House Light" /></div>
+						<div class="card-body">
+							<h3>Plugs, Switches &amp; Lighting</h3>
+							<p>Safe, SABS-compliant electrical installations and upgrades that power your security devices and modernise your property.</p>
+							<a class="card-link" href="servicesList/PlugsSwitches&HouseLight.html">Learn More &rarr;</a>
+						</div>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Choose Us -->
+		<section id="why-us" class="wrapper style2">
+			<div class="container">
+				<div class="title">Why Choose Adamson Security</div>
+				<p class="section-intro">More than ten years of trusted service across Gauteng — built on the values that matter most to our clients.</p>
+
+				<div class="why-list">
+					<div class="why-item">
+						<div class="why-icon">24/7</div>
+						<h4>Always Available</h4>
+						<p>Round-the-clock monitoring, response and on-site presence whenever you need us.</p>
+					</div>
+					<div class="why-item">
+						<div class="why-icon">&#10003;</div>
+						<h4>Vetted &amp; Trained</h4>
+						<p>Disciplined officers and technicians who meet the highest professional standards.</p>
+					</div>
+					<div class="why-item">
+						<div class="why-icon">&#9881;</div>
+						<h4>Tailored Solutions</h4>
+						<p>Every plan is designed around your property, risk profile and budget — never generic.</p>
+					</div>
+					<div class="why-item">
+						<div class="why-icon">&#9733;</div>
+						<h4>Trusted Locally</h4>
+						<p>A proudly Gauteng-based team serving residential, commercial and industrial clients.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta">
+			<div class="container">
+				<h2>Ready to secure what matters most?</h2>
+				<p>Speak to our team today for a free, no-obligation consultation and a quote tailored to your needs.</p>
+				<ul class="actions">
+					<li><a href="bookings.html" class="button">Book A Service</a></li>
+					<li><a href="rates.html" class="button">View Rates</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-4">
+						<h3>Adamson Security Services</h3>
+						<p>10 Deysel Road<br />16B Ezeebox Centre<br />Zandspruit, 1750</p>
+						<p>Email: <a href="mailto:admin@adamsonsecurity.co.za">admin@adamsonsecurity.co.za</a></p>
+						<p>Phone: +27 71 775 0343</p>
+					</div>
+					<div class="col-4">
+						<h3>Navigation</h3>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="rates.html">Rates</a></li>
+							<li><a href="bookings.html">Bookings</a></li>
+							<li><a href="about.html">About Us</a></li>
+						</ul>
+					</div>
+					<div class="col-4">
+						<h3>Connect with Us</h3>
+						<a href="https://api.whatsapp.com/send?phone=27731172821" class="icon brands fa-whatsapp" style="margin-right: 1rem;"></a>
+						<a href="https://www.facebook.com/Adamson-Security-Services-853483464780229" class="icon brands fa-facebook-f" style="margin-right: 1rem;"></a>
+						<a href="https://x.com/AdamsonSecure" class="icon brands fa-twitter" style="margin-right: 1rem;"></a>
+						<a href="https://www.instagram.com/adams.security/" class="icon brands fa-instagram"></a>
+						<div style="margin-top: 1.5rem;">
+							<img src="images/favicon.png" alt="Adamson Security Services Logo" style="max-width: 200px; height: auto;">
 						</div>
 					</div>
-				</section>
+				</div>
+				<div id="copyright">
+					<p>&copy; <span id="current-year"></span> Adamson Security Services. All Rights Reserved. Designed By <a href="https://www.gamechangersites.co.za">Game Changer Sites</a> &amp; <a href="https://">MegaLogic Webs</a></p>
+				</div>
+			</div>
+		</footer>
+	</div>
 
-		</div>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.getElementById('current-year').textContent = new Date().getFullYear();
 
-
-		<!-- Current Date script -->
-		<script>
-			document.getElementById('current-year').textContent = new Date().getFullYear();
-		</script>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-		
-		<!--Tawk Script-->
-		
-		<!--Add To Home Script-->
-		<script type="text/javascript">
-			 if ('serviceWorker' in navigator) {
-				console.log("Will the service worker register?");
-				navigator.serviceWorker.register('service-worker.js')
-				  .then(function(reg){
-					console.log("Yes, it did.");
-				 }).catch(function(err) {
-					console.log("No it didn't. This happened:", err)
-				});
-			}
-		</script>
-
-		<script>
-			// Function to show the Request Quote form
-			function showQuoteForm() {
-				document.getElementById('quoteFormContainer').style.display = 'block';
-			}
-
-			// Function to handle the submission of the Request Quote form
-			function handleQuoteSubmit() {
-				const name = document.getElementById('quote-name').value;
-				if (name) {
-					alert('Thank you, we will be in touch.');
-					document.getElementById('quoteForm').reset(); // Clear the form
-					document.getElementById('quoteFormContainer').style.display = 'none'; // Hide the form
-				}
-				return false; // Prevent actual form submission
-			}
-
-			// Function to show the More Services message
-			function showMoreServices() {
-				alert('Visit our Facebook page, search Adamson Security Services. \n Can also be found on Instagram and Twitter X.');
-			}
-		</script>
-
-		<script>
-			function handleContactFormSubmit() {
-				const nameInput = document.getElementById('contact-name').value;
-				if (nameInput) {
-					alert(`Thanks for contacting us, ${nameInput}. We will be in touch soon!`);
-					document.getElementById('contactForm').reset(); // Clear the form
-				} else {
-					alert('Please provide your name.');
-				}
-				return false; // Prevent the form from actually submitting
-			}
-		</script>
-
-		<script>
-		function toggleMoreServices() {
-			const section = document.getElementById("moreServices");
-			const button = document.getElementById("toggleButton");
-
-			if (section.style.display === "none") {
-			section.style.display = "block";
-			button.innerText = "Show Less";
-			} else {
-			section.style.display = "none";
-			button.innerText = "More Services";
-			}
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('service-worker.js')
+				.then(function (reg) { console.log('Service worker registered.'); })
+				.catch(function (err) { console.log('Service worker registration failed:', err); });
 		}
-		</script>
-
-
-	</body>
+	</script>
+</body>
 </html>

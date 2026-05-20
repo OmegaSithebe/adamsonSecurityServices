@@ -20,237 +20,235 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<style>
-		/* Responsive Design Fixes */
-		* {
-			box-sizing: border-box;
-		}
+		/* ===== Base ===== */
+		* { box-sizing: border-box; }
+		img { max-width: 100%; height: auto; display: block; }
 
-		/* Mobile First Approach */
-		@media (max-width: 1024px) {
-			header .col-3, header .col-9 {
-				flex-basis: 100%;
-				max-width: 100%;
-			}
-			header #nav ul {
-				flex-wrap: wrap !important;
-				gap: 15px !important;
-				justify-content: flex-start !important;
-				padding: 10px 0 !important;
-			}
-		}
-
-		@media (max-width: 768px) {
-			header #logo img {
-				height: 80px !important;
-			}
-			header #nav ul {
-				gap: 10px !important;
-			}
-			header #nav ul li a {
-				font-size: 14px !important;
-			}
-
-			#hero {
-				padding: 40px 0 30px !important;
-			}
-			#hero .row {
-				flex-direction: column !important;
-			}
-			#hero .col-6 {
-				flex-basis: 100%;
-				max-width: 100%;
-				margin-bottom: 30px;
-			}
-			#hero h1 {
-				font-size: 28px !important;
-			}
-			#hero p {
-				font-size: 14px !important;
-			}
-			#hero .actions {
-				flex-direction: column;
-			}
-			#hero .actions li {
-				width: 100%;
-			}
-			#hero .actions li a {
-				width: 100%;
-				text-align: center;
-			}
-
-			.feature-list .row {
-				flex-direction: column;
-			}
-			.feature-list .col-4 {
-				flex-basis: 100%;
-				max-width: 100%;
-				margin-bottom: 20px;
-			}
-
-			#about .row {
-				flex-direction: column;
-			}
-			#about .col-6 {
-				flex-basis: 100%;
-				max-width: 100%;
-				margin-bottom: 30px;
-			}
-			#about h2 {
-				font-size: 22px !important;
-			}
-
-			.client-logos {
-				grid-template-columns: repeat(3, 1fr) !important;
-			}
-			.compliance-logos {
-				grid-template-columns: repeat(2, 1fr) !important;
-			}
-
-			#footer .row {
-				flex-direction: column;
-			}
-			#footer .col-4 {
-				flex-basis: 100%;
-				max-width: 100%;
-				margin-bottom: 20px;
-			}
-		}
-
-		@media (max-width: 480px) {
-			header #logo img {
-				height: 60px !important;
-			}
-			header #nav ul {
-				gap: 8px !important;
-				font-size: 12px;
-			}
-			header #nav ul li a {
-				font-size: 12px !important;
-				font-weight: 400 !important;
-			}
-
-			#hero {
-				padding: 30px 0 20px !important;
-			}
-			#hero h5 {
-				font-size: 14px !important;
-			}
-			#hero h1 {
-				font-size: 22px !important;
-			}
-			#hero p {
-				font-size: 13px !important;
-			}
-			#hero .actions li a {
-				font-size: 12px !important;
-				padding: 8px 12px !important;
-			}
-
-			.title {
-				font-size: 24px !important;
-				margin-bottom: 20px !important;
-			}
-			.feature-list section h3 {
-				font-size: 16px !important;
-			}
-			.feature-list section p {
-				font-size: 12px !important;
-			}
-
-			#about h5 {
-				font-size: 14px !important;
-			}
-			#about h2 {
-				font-size: 18px !important;
-			}
-			#about p, #about ul {
-				font-size: 13px !important;
-			}
-
-			#clients p {
-				font-size: 13px !important;
-			}
-			.client-logos {
-				grid-template-columns: repeat(2, 1fr) !important;
-				gap: 0.75rem !important;
-			}
-			.logo-placeholder {
-				min-height: 90px !important;
-				font-size: 12px !important;
-			}
-
-			#compliances p {
-				font-size: 13px !important;
-			}
-			.compliance-logos {
-				grid-template-columns: 1fr !important;
-				gap: 0.75rem !important;
-			}
-			.compliance-logos img {
-				height: 100px !important;
-			}
-
-			#footer h3 {
-				font-size: 16px !important;
-			}
-			#footer p {
-				font-size: 12px !important;
-			}
-			#footer a {
-				font-size: 12px !important;
-			}
-			#footer #logo img, #footer .col-4 img {
-				max-width: 150px !important;
-			}
-		}
-
-		/* Ensure images are responsive */
-		img {
-			max-width: 100%;
-			height: auto;
-			display: block;
-		}
-
-		/* Flex utilities for row layout */
+		/* ===== Grid utilities ===== */
 		.row {
 			display: flex;
 			flex-wrap: wrap;
 			width: 100%;
+			margin: 0 -15px;
 		}
-
-		/* Column utilities */
+		.row > [class*="col-"] { padding: 0 15px; }
 		.col-3, .col-4, .col-6, .col-9 {
 			display: flex;
 			flex-direction: column;
 			flex-grow: 0;
+			min-width: 0;
+		}
+		.col-3 { flex-basis: 25%;     max-width: 25%; }
+		.col-4 { flex-basis: 33.333%; max-width: 33.333%; }
+		.col-6 { flex-basis: 50%;     max-width: 50%; }
+		.col-9 { flex-basis: 75%;     max-width: 75%; }
+
+		/* ===== Container ===== */
+		.container { width: 100%; padding: 0 20px; margin: 0 auto; }
+		@media (min-width: 768px)  { .container { max-width: 750px; } }
+		@media (min-width: 992px)  { .container { max-width: 970px; } }
+		@media (min-width: 1200px) { .container { max-width: 1170px; } }
+
+		/* ===== Header / Logo ===== */
+		#masthead .row { align-items: center; }
+		#logo {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			overflow: visible;
+		}
+		#logo a { display: inline-flex; align-items: center; line-height: 0; }
+		#logo img {
+			height: 140px !important;
+			width: 100px !important;
+			max-width: 100%;
+			object-fit: contain;
+			display: block;
 		}
 
-		.col-3 { flex-basis: 25%; }
-		.col-4 { flex-basis: 33.333%; }
-		.col-6 { flex-basis: 50%; }
-		.col-9 { flex-basis: 75%; }
+		/* ===== Nav ===== */
+		#nav ul {
+			list-style: none;
+			display: flex !important;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 25px;
+			margin: 0;
+			padding: 0;
+		}
+		#nav ul li a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 15px;
+			letter-spacing: 0.3px;
+			transition: color .2s ease;
+		}
+		#nav ul li a:hover,
+		#nav ul li.current a { color: #f5a623; }
 
-		/* Container responsive */
-		.container {
-			width: 100%;
-			padding: 0 15px;
-			margin: 0 auto;
+		/* ===== Hero ===== */
+		#hero .row { align-items: center; }
+		#hero h5 { color: #f5a623; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; margin-bottom: 10px; }
+		#hero h1 { font-size: 42px; line-height: 1.2; margin-bottom: 20px; }
+		#hero p  { font-size: 16px; line-height: 1.7; opacity: .9; }
+
+		/* ===== Hero buttons (force horizontal, override main.css) ===== */
+		#hero ul.actions,
+		.actions {
+			list-style: none !important;
+			padding: 0 !important;
+			margin: 25px 0 0 0 !important;
+			display: flex !important;
+			flex-wrap: wrap !important;
+			gap: 15px !important;
+			align-items: center !important;
+		}
+		#hero ul.actions li,
+		.actions li {
+			display: inline-flex !important;
+			margin: 0 !important;
+			padding: 0 !important;
+			width: auto !important;
+		}
+		#hero ul.actions li a.button,
+		.actions li .button {
+			display: inline-block !important;
+			width: auto !important;
+			max-width: none !important;
+			padding: 14px 28px !important;
+			font-size: 15px !important;
+			font-weight: 600 !important;
+			text-align: center !important;
+			border-radius: 6px !important;
+			letter-spacing: .5px !important;
+			text-transform: uppercase !important;
+			background: #f5a623 !important;
+			color: #111 !important;
+			border: 2px solid #f5a623 !important;
+			transition: all .25s ease !important;
+		}
+		#hero ul.actions li:nth-child(2) a.button,
+		.actions li:nth-child(2) .button {
+			background: transparent !important;
+			color: #fff !important;
+		}
+		#hero ul.actions li a.button:hover,
+		.actions li .button:hover {
+			background: #fff !important;
+			color: #111 !important;
+			border-color: #fff !important;
+			transform: translateY(-2px);
 		}
 
-		@media (min-width: 768px) {
-			.container {
-				max-width: 750px;
-			}
+		/* ===== Sections ===== */
+		.wrapper { padding: 70px 0; }
+		.title {
+			text-align: center;
+			font-size: 32px;
+			font-weight: 700;
+			margin-bottom: 40px;
+			color: #222;
 		}
-		@media (min-width: 992px) {
-			.container {
-				max-width: 970px;
-			}
+		.wrapper.style1 .title { color: #fff; }
+		.feature-list section {
+			position: relative;
+			padding: 20px 15px 20px 70px;
 		}
-		@media (min-width: 1200px) {
-			.container {
-				max-width: 1170px;
+		.feature-list section h3 { margin-bottom: 10px; }
+
+		/* ===== Footer ===== */
+		#footer { background: #1a1a1a; color: #ddd; padding: 50px 0 20px; }
+		#footer h3 { color: #fff; margin-bottom: 15px; }
+		#footer a { color: #f5a623; }
+		#footer ul { list-style: none; padding: 0; margin: 0; }
+		#footer ul li { margin-bottom: 8px; }
+		#copyright { text-align: center; padding-top: 25px; margin-top: 30px; border-top: 1px solid rgba(255,255,255,.1); font-size: 13px; }
+
+		/* ============================================ */
+		/* RESPONSIVE BREAKPOINTS                       */
+		/* ============================================ */
+
+		/* Tablet landscape and below */
+		@media (max-width: 1024px) {
+			#masthead .col-3, #masthead .col-9 {
+				flex-basis: 100%;
+				max-width: 100%;
+				text-align: center;
 			}
+			#logo { justify-content: center; margin-bottom: 15px; }
+			#nav ul { justify-content: center; gap: 18px; }
+			#hero h1 { font-size: 34px; }
+		}
+
+		/* Tablet portrait */
+		@media (max-width: 768px) {
+			.wrapper { padding: 50px 0; }
+			#logo img { height: 60px !important; }
+			#nav ul { gap: 12px; }
+			#nav ul li a { font-size: 14px; }
+
+			#hero { padding: 50px 0 !important; }
+			#hero .col-6 { flex-basis: 100%; max-width: 100%; margin-bottom: 30px; text-align: center; }
+			#hero h1 { font-size: 28px; }
+			#hero p  { font-size: 15px; }
+			#hero ul.actions { justify-content: center !important; }
+
+			.feature-list .col-4 { flex-basis: 50%; max-width: 50%; margin-bottom: 20px; }
+
+			#about .col-6 { flex-basis: 100%; max-width: 100%; margin-bottom: 25px; }
+			#about h2 { font-size: 24px !important; }
+
+			.client-logos { grid-template-columns: repeat(3, 1fr) !important; }
+			.compliance-logos { grid-template-columns: repeat(3, 1fr) !important; }
+
+			#footer .col-4 { flex-basis: 100%; max-width: 100%; margin-bottom: 25px; text-align: center; }
+			.title { font-size: 26px; }
+		}
+
+		/* Mobile */
+		@media (max-width: 480px) {
+			.wrapper { padding: 40px 0; }
+			.container { padding: 0 15px; }
+			#logo img { height: 55px !important; }
+			#nav ul { gap: 8px 14px; }
+			#nav ul li a { font-size: 13px; }
+
+			#hero { padding: 40px 0 !important; }
+			#hero h5 { font-size: 12px; }
+			#hero h1 { font-size: 24px; }
+			#hero p  { font-size: 14px; }
+
+			/* Stack buttons full-width on small phones — clean and tappable */
+			#hero ul.actions { flex-direction: column !important; align-items: stretch !important; width: 100%; }
+			#hero ul.actions li { width: 100% !important; }
+			#hero ul.actions li a.button {
+				width: 100% !important;
+				display: block !important;
+				padding: 14px 18px !important;
+				font-size: 14px !important;
+			}
+
+			.title { font-size: 22px; margin-bottom: 25px; }
+			.feature-list .col-4 { flex-basis: 100%; max-width: 100%; }
+			.feature-list section { padding: 18px 10px 18px 65px; }
+			.feature-list section h3 { font-size: 16px; }
+			.feature-list section p  { font-size: 13px; }
+
+			#about h5 { font-size: 13px; }
+			#about h2 { font-size: 20px !important; }
+			#about p, #about ul { font-size: 14px; }
+
+			.client-logos { grid-template-columns: repeat(2, 1fr) !important; gap: 0.75rem !important; }
+			.logo-placeholder { min-height: 90px !important; font-size: 12px !important; }
+
+			.compliance-logos { grid-template-columns: repeat(2, 1fr) !important; gap: 0.75rem !important; }
+			.compliance-logos img { height: 90px !important; }
+
+			#footer h3 { font-size: 16px; }
+			#footer p, #footer a { font-size: 13px; }
+			#footer .col-4 img { max-width: 160px !important; margin: 0 auto; }
 		}
 	</style>
 </head>
@@ -259,21 +257,21 @@
 	<div id="page-wrapper">
 
 		<!-- Header -->
-		<header id="masthead" class="wrapper" style="background-color: #222; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+		<header id="masthead" class="wrapper" style="background-color: #1a1a1a; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
 			<div class="container">
 				<div class="row">
 					<div class="col-3">
 						<div id="logo">
-							<a href="index.html"><img src="images/favicon.png" alt="Adamson Security Services" style="height: 110px; width: auto;" /></a>
+							<a href="index.html"><img src="images/favicon.png" alt="Adamson Security Services" /></a>
 						</div>
 					</div>
 					<div class="col-9">
 						<nav id="nav">
-					<ul style="list-style: none; display: flex; justify-content: center; gap: 30px; margin: 0; padding: 0; align-items: center;">
-								<li class="current"><a href="index.html" style="color: #fff; text-decoration: none; font-weight: 500;">Home</a></li>
-								<li><a href="services.html" style="color: #fff; text-decoration: none; font-weight: 500;">Services</a></li>
-								<li><a href="rates.html" style="color: #fff; text-decoration: none; font-weight: 500;">Rates</a></li>
-								<li><a href="bookings.html" style="color: #fff; text-decoration: none; font-weight: 500;">Bookings</a></li>
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+								<li><a href="services.html">Services</a></li>
+								<li><a href="rates.html">Rates</a></li>
+								<li><a href="bookings.html">Bookings</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -473,81 +471,12 @@
 	<script src="assets/js/main.js"></script>
 	<script>
 		document.getElementById('current-year').textContent = new Date().getFullYear();
+
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('service-worker.js')
+				.then(function (reg) { console.log('Service worker registered.'); })
+				.catch(function (err) { console.log('Service worker registration failed:', err); });
+		}
 	</script>
 </body>
-</html>
-		<script>
-			document.getElementById('current-year').textContent = new Date().getFullYear();
-		</script>
-		
-			
-		<!--Add To Home Script-->
-		<script type="text/javascript">
-			 if ('serviceWorker' in navigator) {
-				console.log("Will the service worker register?");
-				navigator.serviceWorker.register('service-worker.js')
-				  .then(function(reg){
-					console.log("Yes, it did.");
-				 }).catch(function(err) {
-					console.log("No it didn't. This happened:", err)
-				});
-			}
-		</script>
-
-		<script>
-			// Function to show the Request Quote form
-			function showQuoteForm() {
-				const formContainer = document.getElementById('quoteFormContainer');
-				const isVisible = formContainer.style.display === 'block';
-
-				// Toggle display
-				formContainer.style.display = isVisible ? 'none' : 'block';
-			}
-
-			// Function to handle the submission of the Request Quote form
-			function handleQuoteSubmit() {
-				const name = document.getElementById('quote-name').value;
-				if (name) {
-					alert('Thank you, we will be in touch.');
-					document.getElementById('quoteForm').reset(); // Clear the form
-					document.getElementById('quoteFormContainer').style.display = 'none'; // Hide the form
-				}
-				return false; // Prevent actual form submission
-			}
-
-			// Function to show the More Services message
-			function showMoreServices() {
-				const moreServices = document.getElementById("moreServices");
-				const toggleButton = document.getElementById("toggleMoreBtn");
-
-				if (moreServices.style.display === "none") {
-					moreServices.style.display = "block";
-					toggleButton.textContent = "Hide Services";
-				} else {
-					moreServices.style.display = "none";
-					toggleButton.textContent = "More Services";
-				}
-			}
-		</script>
-
-		<script>
-			function handleContactFormSubmit() {
-				const nameInput = document.getElementById('contact-name').value;
-				if (nameInput) {
-					alert(`Thanks for contacting us, ${nameInput}. We will be in touch soon!`);
-					document.getElementById('contactForm').reset(); // Clear the form
-				} else {
-					alert('Please provide your name.');
-				}
-				return false; // Prevent the form from actually submitting
-			}
-
-
-			function toggleMoreServices() {
-				const menu = document.getElementById('more-services-menu');
-				menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-			}
-		</script>
-
-	</body>
 </html>
