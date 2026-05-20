@@ -19,6 +19,240 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+	<style>
+		/* Responsive Design Fixes */
+		* {
+			box-sizing: border-box;
+		}
+
+		/* Mobile First Approach */
+		@media (max-width: 1024px) {
+			header .col-3, header .col-9 {
+				flex-basis: 100%;
+				max-width: 100%;
+			}
+			header #nav ul {
+				flex-wrap: wrap !important;
+				gap: 15px !important;
+				justify-content: flex-start !important;
+				padding: 10px 0 !important;
+			}
+		}
+
+		@media (max-width: 768px) {
+			header #logo img {
+				height: 80px !important;
+			}
+			header #nav ul {
+				gap: 10px !important;
+			}
+			header #nav ul li a {
+				font-size: 14px !important;
+			}
+
+			#hero {
+				padding: 40px 0 30px !important;
+			}
+			#hero .row {
+				flex-direction: column !important;
+			}
+			#hero .col-6 {
+				flex-basis: 100%;
+				max-width: 100%;
+				margin-bottom: 30px;
+			}
+			#hero h1 {
+				font-size: 28px !important;
+			}
+			#hero p {
+				font-size: 14px !important;
+			}
+			#hero .actions {
+				flex-direction: column;
+			}
+			#hero .actions li {
+				width: 100%;
+			}
+			#hero .actions li a {
+				width: 100%;
+				text-align: center;
+			}
+
+			.feature-list .row {
+				flex-direction: column;
+			}
+			.feature-list .col-4 {
+				flex-basis: 100%;
+				max-width: 100%;
+				margin-bottom: 20px;
+			}
+
+			#about .row {
+				flex-direction: column;
+			}
+			#about .col-6 {
+				flex-basis: 100%;
+				max-width: 100%;
+				margin-bottom: 30px;
+			}
+			#about h2 {
+				font-size: 22px !important;
+			}
+
+			.client-logos {
+				grid-template-columns: repeat(3, 1fr) !important;
+			}
+			.compliance-logos {
+				grid-template-columns: repeat(2, 1fr) !important;
+			}
+
+			#footer .row {
+				flex-direction: column;
+			}
+			#footer .col-4 {
+				flex-basis: 100%;
+				max-width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			header #logo img {
+				height: 60px !important;
+			}
+			header #nav ul {
+				gap: 8px !important;
+				font-size: 12px;
+			}
+			header #nav ul li a {
+				font-size: 12px !important;
+				font-weight: 400 !important;
+			}
+
+			#hero {
+				padding: 30px 0 20px !important;
+			}
+			#hero h5 {
+				font-size: 14px !important;
+			}
+			#hero h1 {
+				font-size: 22px !important;
+			}
+			#hero p {
+				font-size: 13px !important;
+			}
+			#hero .actions li a {
+				font-size: 12px !important;
+				padding: 8px 12px !important;
+			}
+
+			.title {
+				font-size: 24px !important;
+				margin-bottom: 20px !important;
+			}
+			.feature-list section h3 {
+				font-size: 16px !important;
+			}
+			.feature-list section p {
+				font-size: 12px !important;
+			}
+
+			#about h5 {
+				font-size: 14px !important;
+			}
+			#about h2 {
+				font-size: 18px !important;
+			}
+			#about p, #about ul {
+				font-size: 13px !important;
+			}
+
+			#clients p {
+				font-size: 13px !important;
+			}
+			.client-logos {
+				grid-template-columns: repeat(2, 1fr) !important;
+				gap: 0.75rem !important;
+			}
+			.logo-placeholder {
+				min-height: 90px !important;
+				font-size: 12px !important;
+			}
+
+			#compliances p {
+				font-size: 13px !important;
+			}
+			.compliance-logos {
+				grid-template-columns: 1fr !important;
+				gap: 0.75rem !important;
+			}
+			.compliance-logos img {
+				height: 100px !important;
+			}
+
+			#footer h3 {
+				font-size: 16px !important;
+			}
+			#footer p {
+				font-size: 12px !important;
+			}
+			#footer a {
+				font-size: 12px !important;
+			}
+			#footer #logo img, #footer .col-4 img {
+				max-width: 150px !important;
+			}
+		}
+
+		/* Ensure images are responsive */
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		/* Flex utilities for row layout */
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+		}
+
+		/* Column utilities */
+		.col-3, .col-4, .col-6, .col-9 {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 0;
+		}
+
+		.col-3 { flex-basis: 25%; }
+		.col-4 { flex-basis: 33.333%; }
+		.col-6 { flex-basis: 50%; }
+		.col-9 { flex-basis: 75%; }
+
+		/* Container responsive */
+		.container {
+			width: 100%;
+			padding: 0 15px;
+			margin: 0 auto;
+		}
+
+		@media (min-width: 768px) {
+			.container {
+				max-width: 750px;
+			}
+		}
+		@media (min-width: 992px) {
+			.container {
+				max-width: 970px;
+			}
+		}
+		@media (min-width: 1200px) {
+			.container {
+				max-width: 1170px;
+			}
+		}
+	</style>
 </head>
 
 <body class="homepage is-preload">
